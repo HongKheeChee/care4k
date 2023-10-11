@@ -1,0 +1,22 @@
+<?php require_once('../config.php'); ?>
+<!DOCTYPE HTML>
+<head>
+<title> Pertubuhan Rumah Sinar | <?php echo $_settings->info('short_name') ?></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pertubuhan Rumah Sinar" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://localhost/charity/dist/img/no-image-available.png" />
+<meta property="og:url" content="http://localhost/charity/pages/pertubuhan_rumah_sinar.php" />
+<?php require_once('../inc/page_header.php') ?>
+</head>
+<?php include(base_app.'inc/body_block.php') ?>
+<h2>Pertubuhan Rumah Sinar</h2>
+<input name="blog_id" value="34173cb38f07f89ddbebc2ac9128303f" type="hidden">
+<hr>
+<span class='text-muted'><i class='fa fa-calendar-day'></i> Published: Oct 11,2023 07:46 PM</span>
+<center><img src="http://localhost/charity/dist/img/no-image-available.png" class="img-thumbnail img-banner" alt="http://localhost/charity/pages/pertubuhan_rumah_sinar.php" /></center>
+<div class="SALvLe farUxc mJ2Mod" style="border-top: 1px solid rgb(235, 235, 235); color: rgb(32, 33, 36); font-family: arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);"><div class="i4J0ge"><div class="EfDVh wDYxhc" data-attrid="kc:/location/location:address" data-md="1002" lang="en-MY" data-hveid="CBMQAA" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQkCl6BAgTEAA" style="line-height: 1.58; padding-left: 15px; padding-right: 15px; padding-bottom: 0px; clear: none;"><div class="Z1hOCe"><div class="zloOqf PZPZlf" data-dtype="d3ifr" data-local-attribute="d3adr" data-mid="/g/11c3mpns5t" jsdata="kMGuHf;_;B9HYGQ" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQghwoAHoECBMQAQ" style="margin-top: 7px;"><span class="w8qArf" style="font-weight: bolder;"><a class="fl" href="https://www.google.com/search?sca_esv=572530057&cs=0&sxsrf=AM9HkKmka45Y9cirKc8pzH6hGk3PPuizSw:1697024623871&q=pertubuhan+rumah+sinar+address&ludocid=13895183982643673336&sa=X&ved=2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQ6BN6BAgTEAI" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQ6BN6BAgTEAI" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); outline: 0px; color: rgb(0, 0, 0) !important;">Address</a>: </span><span class="LrzXr">2688, Jalan Rozhan, Taman Hwa Seng, 14000 Bukit Mertajam, Pulau Pinang</span><div class="GnGVVe" style="color: rgb(112, 117, 122);"></div><div jscontroller="sc5wWb" class="GDRHkb" data-at="5" data-uid="1" jsaction="rcuQ6b:npT2md" style="padding-left: 16px;"></div><div jscontroller="sc5wWb" class="GDRHkb" data-at="2" data-uid="1" jsaction="rcuQ6b:npT2md" style="padding-left: 16px;"></div></div></div></div></div></div><div class="wDYxhc" data-attrid="kc:/collection/knowledge_panels/has_phone:phone" data-md="1006" lang="en-MY" data-hveid="CBUQAA" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQkCl6BAgVEAA" style="line-height: 1.58; padding-left: 15px; padding-right: 15px; color: rgb(32, 33, 36); font-family: arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); clear: none;"><div class="Z1hOCe"><div class="zloOqf PZPZlf" data-dtype="d3ifr" data-local-attribute="d3ph" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQ8I0BKAB6BAgVEAE" style="margin-top: 7px;"><span class="w8qArf" style="font-weight: bolder;"><a class="fl" href="https://www.google.com/search?sca_esv=572530057&cs=0&sxsrf=AM9HkKmka45Y9cirKc8pzH6hGk3PPuizSw:1697024623871&q=pertubuhan+rumah+sinar+phone&ludocid=13895183982643673336&sa=X&ved=2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQ6BN6BAgVEAI" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQ6BN6BAgVEAI" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); outline: 0px; color: rgb(0, 0, 0) !important;">Phone</a>: </span><span class="LrzXr zdqRlf kno-fv"><a data-dtype="d3ph" data-local-attribute="d3ph" jscontroller="LWZElb" href="https://www.google.com/search?sca_esv=572530057&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=AM9HkKmGOKtxabRa0PpHwUw_M5n4hpLzdA:1697024392268&q=orphanage+in+penang&rflfq=1&num=10&rllag=5428496,100314630,2231&sa=X&ved=2ahUKEwjY2s3A9O2BAxX6UGwGHangC-0QjGp6BAgTEAE&biw=958&bih=945&dpr=1#" jsdata="QKGTRc;_;B9HYGw" jsaction="rcuQ6b:npT2md;F75qrd" data-ved="2ahUKEwjH3fKu9e2BAxWKamwGHV_RDnAQkAgoAHoECBUQAw" style="color: rgb(26, 13, 171); -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); outline: 0px;">04-551 2688</a></span></div></div></div>
+<?php include(base_app.'inc/body_block_end.php') ?>
