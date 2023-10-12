@@ -56,6 +56,19 @@
             </div>
         </div>
     </div>
+    <p></p>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
 </section>
 <script>
     function cancel_book($id){

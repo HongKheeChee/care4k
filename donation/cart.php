@@ -61,6 +61,18 @@
             <a href="./?p=checkout" class="btn btn-sm btn-flat btn-dark">Checkout</a>
         </div>
     </div>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
 </section>
 <script>
     function calc_total(){

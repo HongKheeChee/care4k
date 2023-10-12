@@ -98,7 +98,7 @@
                         <li class="nav-item"><a class="nav-link" href="./?p=view_categories">All Categories</a></li>
                         <?php endif; ?>
                         <li class="nav-item"><a class="nav-link" href="./?p=about">About</a></li>&nbsp;
-                        <li class="nav-item"><a class="nav-link" href="/charity/admin/login.php">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/charity/donation/admin/login.php">Admin</a></li>
                     </ul>
                      <form class="form-inline" id="search-form">
                   <div class="input-group">

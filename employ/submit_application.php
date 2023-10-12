@@ -18,7 +18,7 @@
 		<div class="row form-group">
 			<div class="col-md-4">
 				<label for="" class="control-label">Last Name</label>
-				<input type="text" class="form-control" name="lastname" required="yes">
+				<input type="text" class="form-control" name="lastname" required>
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">First Name</label>
@@ -39,7 +39,7 @@
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">Email</label>
-				<input type="email" class="form-control" name="email" required="">
+				<input type="email" class="form-control" name="email" required>
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">Contact</label>

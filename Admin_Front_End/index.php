@@ -4,6 +4,9 @@ include '../Admin_Back_End/config.php';
 include '../Admin_Back_End/db_conn.php';
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -381,6 +384,7 @@ include '../Admin_Back_End/db_conn.php';
       <!-- Custom js for this page-->
       <script src="../Admin_Front_End/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
       <script src="../Admin_Front_End/admin_js/performanceLine.js?v=<?=$version?>" type="text/javascript"></script>
+      <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
       <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
       
       <!-- End custom js for this page-->

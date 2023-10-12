@@ -150,7 +150,7 @@ Class Master extends DBConnection {
 			return $this->capture_err();
 		if($check > 0){
 			$resp['status'] = 'failed';
-			$resp['msg'] = "Book already exist.";
+			$resp['msg'] = "Item already exist.";
 			return json_encode($resp);
 			exit;
 		}

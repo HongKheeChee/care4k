@@ -114,8 +114,20 @@
                 </div>
             </div>
             <?php endwhile; ?>
-        </div>
+        </div><br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
+    <br></br>
+    <br></br><!-- comment -->
+    <br></br>
     </div>
+    
 </section>
 <script>
     var inv = $.parseJSON('<?php echo json_encode($inv) ?>');
