@@ -11,7 +11,7 @@
 <div class="container-fluid py-2 px-3">
     <p>Your donation will be much appreciated and can help others. Thank you!</p>
     <div class="form-group">
-        <input type="number" step="2" min="0" id="amount" class="form-control form-control-lg text-right">
+        RM<input type="number" step="2" min="0" id="amount" class="form-control form-control-lg text-left">
         <center><small>Enter Donation Amount Here</small></center>
     </div>
     <div class="form-group">

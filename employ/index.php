@@ -189,6 +189,8 @@
   <p></p><!-- comment -->
   <p></p><!-- comment -->
   <p></p>
+  <br></br>
+  
        <?php include('footer.php') ?>
     </body>
 

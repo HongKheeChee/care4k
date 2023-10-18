@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url: "http://localhost/charity/Admin_Front_End/admin_js/data_line.php",
+        url: "http://localhost/charity/User_FE/admin_js/data_line.php",
         type: "GET",
         success: function(myData){
             var data = JSON.parse(myData);
@@ -9,8 +9,8 @@ $(document).ready(function(){
             var eventDate = [];
             
             for(var i in data){
-                totalPrice.push(data[i].total_price);
-                eventDate.push("Date " + data[i].event_date);
+                totalPrice.push(data[i].amount);
+                eventDate.push("Date " + data[i].date_created);
             }
             (function($) {
                 'use strict';

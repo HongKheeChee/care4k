@@ -1,8 +1,8 @@
 <?php
 session_start();
-include '../Admin_Back_End/config.php';
-include '../Admin_Back_End/api/Faq/dbcon.php';
-include '../Admin_Back_End/api/Faq/message.php';
+include '../User_BE/config.php';
+include '../User_BE/api/Faq/dbcon.php';
+include '../User_BE/api/Faq/message.php';
 ?>
 
 <!DOCTYPE html>
@@ -302,3 +302,4 @@ window.onclick = function(event) {
         <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
     </body>
 </html>
+

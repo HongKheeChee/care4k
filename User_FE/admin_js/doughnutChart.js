@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url: "http://localhost/charity/Admin_Front_End/admin_js/data_doughnut.php",
+        url: "http://localhost/charity/User_FE/admin_js/data_doughnut.php",
         type: "GET",
         success: function(myData){
             var data = JSON.parse(myData);

@@ -16,17 +16,18 @@
 		</div>
 		<hr>
 		<div class="row form-group">
-			<div class="col-md-4">
+                    <div class="col-md-4"><form>
 				<label for="" class="control-label">Last Name</label>
 				<input type="text" class="form-control" name="lastname" required>
+                                </form>
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">First Name</label>
-				<input type="text" class="form-control" name="firstname" required="">
+				<input type="text" class="form-control" name="firstname" required>
 			</div>
 			<div class="col-md-4">
 				<label for="" class="control-label">Middle Name</label>
-				<input type="text" class="form-control" name="middlename" required="">
+				<input type="text" class="form-control" name="middlename" required>
 			</div>
 		</div>
 		<div class="row form-group">
@@ -37,10 +38,12 @@
 					<option>Female</option>
 				</select>
 			</div>
+                    
 			<div class="col-md-4">
 				<label for="" class="control-label">Email</label>
-				<input type="email" class="form-control" name="email" required>
+				<input type="email" class="form-control" name="email" required/>
 			</div>
+                    
 			<div class="col-md-4">
 				<label for="" class="control-label">Contact</label>
 				<input type="text" class="form-control" name="contact" required="">
@@ -70,6 +73,9 @@
 			  
 			</div>
 		</div>
+                <div class="col-md-4">
+                    <button type="submit">Submit</button>
+                </div>
 	</div>
 	</form>
 </div>

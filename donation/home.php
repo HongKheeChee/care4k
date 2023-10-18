@@ -68,7 +68,7 @@ body {
                     }
             ?>
             <div class="col mb-5">
-                <div class="card product-item">
+                <div class="card h-100 product-item">
                     
                     <!-- Product image-->
                     <img class="card-img-top w-100 book-cover" src="<?php echo validate_image($img) ?>" alt="..." />

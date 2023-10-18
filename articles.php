@@ -43,7 +43,7 @@ if(isset($_GET['t'])){
                         <a class="list-group-item list-group-item-action my-2 border" href="<?php echo base_url.$row['blog_url'] ?>">
                             <div class="w-100">
                                 <img src="<?php echo validate_image($row['banner_path']) ?>" alt="<?php echo addslashes($row['title']) ?>" align="left" class="bg-dark img-banner-list img-thumbnail m-2">
-                                <p class="truncate-5 pt-3"><?php echo ($row['title']) ?></p>
+                                <p class="truncate-5 pt-3"><b><?php echo ($row['title']) ?></b></p>
                                 <p class="truncate-5 pt-3"><?php echo strip_tags(stripslashes(html_entity_decode($row['content']))) ?></p><br>
                             </div>
                             <div class="w 100 d-flex justify-content-end">

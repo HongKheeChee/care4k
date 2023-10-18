@@ -1,7 +1,8 @@
 <?php
 session_start();
-include '../Admin_Back_End/config.php';
-include '../Admin_Back_End/db_conn.php';
+include '../User_BE/config.php';
+include '../User_BE/db_conn.php';
+
 ?>
 
 
@@ -28,7 +29,7 @@ include '../Admin_Back_End/db_conn.php';
         <link rel="icon" href="../Images/logo.png" />
         
         
-        <title>Covent</title>
+        <title>Userdb</title>
     </head>
     <body>
         <div class="container-scroller">
@@ -60,7 +61,8 @@ include '../Admin_Back_End/db_conn.php';
                     <ul class="navbar-nav">
                         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                             <h1 class="welcome-text">Greetings, <span class="text-black fw-bold"><?=$_SESSION['name']?></span></h1>
-                            <h3 class="welcome-sub-text">Welcome to Covent Dashboard</h3>
+                            
+                            <h3 class="welcome-sub-text">Welcome to User Dashboard</h3>
                         </li>
                     </ul>
 
@@ -252,90 +254,36 @@ include '../Admin_Back_End/db_conn.php';
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <?php
-                                                                $query = "SELECT worker_name, service_type, service_desc, project_status, progress_check FROM orders ORDER BY progress_check DESC";
-                                                                
-                                                                $result = mysqli_query($conn, $query);
-                                                                
-                                                                if ($result->num_rows > 0) {
-                                                                        // output data of each row
-                                                                        while($row = $result->fetch_assoc()) {
-                                                                            if($row['project_status'] == "Open"){
-                                                                                echo '<tr>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                            <div>
-                                                                                                <h6>'.$row['worker_name'].'</h6>
-                                                                                                <p>Employee</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <h6>'.$row['service_type'].'</h6>
-                                                                                        <p>'.$row['service_desc'].'</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
-                                                                                                <p class="text-success">'.$row['progress_check'].'</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td><div class="badge badge-opacity-success">'.$row['project_status'].'</div></td>
-                                                                                </tr>';
-                                                                            }else if($row['project_status'] == "In-Progress"){
-                                                                                echo '<tr>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                            <div>
-                                                                                                <h6>'.$row['worker_name'].'</h6>
-                                                                                                <p>Employee</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <h6>'.$row['service_type'].'</h6>
-                                                                                        <p>'.$row['service_desc'].'</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
-                                                                                                <p class="text-success">'.$row['progress_check'].'</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td><div class="badge badge-opacity-warning">'.$row['project_status'].'</div></td>
-                                                                                </tr>';
-                                                                            }else{
-                                                                                echo '<tr>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                            <div>
-                                                                                                <h6>'.$row['worker_name'].'</h6>
-                                                                                                <p>Employee</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <h6>'.$row['service_type'].'</h6>
-                                                                                        <p>'.$row['service_desc'].'</p>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
-                                                                                                <p class="text-success">'.$row['progress_check'].'</p>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td><div class="badge badge-opacity-danger">'.$row['project_status'].'</div></td>
-                                                                                </tr>';
-                                                                            }
-                                                                            
-                                                                            
-                                                                        }
-                                                                    }
-                                                                ?>
-                                                                
+                                                                <?php 
+                                $i = 1;
+                                $qry = $conn->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id where o.client_id = '2' order by unix_timestamp(o.date_created) desc ");
+                                while($row = $qry->fetch_assoc()):
+                            ?>
+                                <tr>
+                                    <td><?php echo $i++ ?></td>
+                                    
+                                    <td><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
+                                    
+                                    <td><a href="javascript:void(0)" class="view_order" data-id="<?php echo $row['id'] ?>"><?php echo md5($row['id']); ?></a></td>
+                                    
+                                    <td><?php echo number_format($row['amount']) ?> </td>
+                                    
+                                    <td class="text-center">
+                                            <?php if($row['status'] == 0): ?>
+                                                <span class="badge badge-light text-dark">Pending</span>
+                                            <?php elseif($row['status'] == 1): ?>
+                                                <span class="badge badge-primary">Packed</span>
+                                            <?php elseif($row['status'] == 2): ?>
+                                                <span class="badge badge-warning">Out for Delivery</span>
+                                            <?php elseif($row['status'] == 3): ?>
+                                                <span class="badge badge-success">Delivered</span>
+                                            <?php else: ?>
+                                                <span class="badge badge-danger">Cancelled</span>
+                                            <?php endif; ?>
+                                        </td>
+                                    </tr>
+                            <?php endwhile; ?>
+                        
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -371,24 +319,59 @@ include '../Admin_Back_End/db_conn.php';
       <!-- container-scroller -->
 
       
-      <script src="../Admin_Front_End/admin_design/vendors/js/vendor.bundle.base.js"></script>
-      <script src="../Admin_Front_End/admin_design/vendors/chart.js/Chart.min.js"></script>
+      <script src="../User_FE/admin_design/vendors/js/vendor.bundle.base.js"></script>
+      <script src="../User_FE/admin_design/vendors/chart.js/Chart.min.js"></script>
 
       <!-- End plugin js for this page -->
       <!-- inject:js -->
-      <script src="../Admin_Front_End/admin_design/js/off-canvas.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/hoverable-collapse.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/template.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/settings.js"></script>
+      <script src="../User_FE/admin_design/js/off-canvas.js"></script>
+      <script src="../User_FE/admin_design/js/hoverable-collapse.js"></script>
+      <script src="../User_FE/admin_design/js/template.js"></script>
+      <script src="../User_FE/admin_design/js/settings.js"></script>
       <!-- endinject -->
       <!-- Custom js for this page-->
-      <script src="../Admin_Front_End/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
-      <script src="../Admin_Front_End/admin_js/performanceLine.js?v=<?=$version?>" type="text/javascript"></script>
-      <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
-      <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
+      <script src="../User_FE/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
+      <script src="../User_FE/admin_js/performanceLine.js?v=<?=$version?>" type="text/javascript"></script>
+      <script src="../User_FE/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
+      <script src="../User_FE/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
       
       <!-- End custom js for this page-->
     </body>
 
 </html>
+<script>
+    function cancel_book($id){
+        start_loader()
+        $.ajax({
+            url:_base_url_+"classes/Master.php?f=update_book_status",
+            method:"POST",
+            data:{id:$id,status:2},
+            dataType:"json",
+            error:err=>{
+                console.log(err)
+                alert_toast("an error occured",'error')
+                end_loader()
+            },
+            success:function(resp){
+                if(typeof resp == 'object' && resp.status == 'success'){
+                    alert_toast("Book cancelled successfully",'success')
+                    setTimeout(function(){
+                        location.reload()
+                    },2000)
+                }else{
+                    console.log(resp)
+                    alert_toast("an error occured",'error')
+                }
+                end_loader()
+            }
+        })
+    }
+    $(function(){
+        $('.view_order').click(function(){
+            uni_modal("Order Details","/charity/donation/admin/orders/view_order.php?view=user&id="+$(this).attr('data-id'),'large')
+        })
+        $('table').dataTable();
+
+    })
+</script>
 

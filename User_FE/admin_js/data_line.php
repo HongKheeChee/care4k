@@ -2,7 +2,7 @@
 session_start();
 include '../../Back_End/db_conn.php';
 
-$query = sprintf("SELECT event_date, SUM(total_price) AS total_price FROM service GROUP BY event_date ORDER BY event_date");
+$query = sprintf("SELECT date_created, amount FROM orders ORDER BY date_created");
 
 $result = mysqli_query($conn, $query);
 
