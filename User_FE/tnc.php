@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../User_BE/config.php';
-include '../User_BE/api/Faq/dbcon.php';
+include '../User_BE/api/tnc_api/dbcon.php';
 include '../User_BE/api/Faq/message.php';
 ?>
 
@@ -45,10 +45,10 @@ include '../User_BE/api/Faq/message.php';
 
                     <div>
                         <a class="navbar-brand brand-logo" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                         <a class="navbar-brand brand-logo-mini" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                     </div>
                 </div>
@@ -57,8 +57,8 @@ include '../User_BE/api/Faq/message.php';
                 <div class="navbar-menu-wrapper d-flex align-items-top"> 
                     <ul class="navbar-nav">
                         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                            <h1 class="welcome-text">Edit Service: <span class="text-black fw-bold">TNC</span></h1>
-                            <h3 class="welcome-sub-text">Term and condition</h3>
+                            <h1 class="welcome-text">Details on: <span class="text-black fw-bold">Donation</span></h1>
+                            <h3 class="welcome-sub-text">Donation </h3>
                         </li>
                     </ul>
 
@@ -137,27 +137,20 @@ include '../User_BE/api/Faq/message.php';
                         <li class="nav-item">
                             <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-layers-outline"></i>
-                                <span class="menu-title">Discount</span>
+                                <span class="menu-title">Event</span>
                             </a>
                         </li>
-                        <li class="nav-item nav-category">Company Management</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="employee.php" aria-expanded="false" aria-controls="auth">
-                                <i class="menu-icon mdi mdi-account-circle-outline"></i>
-                                <span class="menu-title">Employees</span>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-category">Information Editor</li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" href="tnc.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Terms and Condition</span>
+                                <span class="menu-title">Donation </span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-help-circle-outline"></i>
-                                <span class="menu-title">Help</span>
+                                <span class="menu-title">Volunteer</span>
                             </a>
                         </li>
                     </ul>
@@ -170,58 +163,64 @@ include '../User_BE/api/Faq/message.php';
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>TNC
-                                            <a href="../Admin_Back_End/api/tnc_api/TNCcreate.php" class="btn btn-primary float-end">Add TNC</a>
+                                        <h4>Inkind donation list
+                                            <a href="http://localhost/charity/donation/index.php" class="btn btn-primary float-end">Donation</a>
                                         </h4>
                                     </div>
                                     <div class="card-body" style="overflow:auto">
 
-                                        <table class="table table-bordered table-striped" style="width:100%;">
-                                            <thead>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <th>TNC</th>
-                                                    <th>Action</th>
-                                                    <th>Action</th>
-                                                    <th>Action</th><!-- comment -->
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php 
-                                                    $query = "SELECT * FROM events";
-                                                    $query_run = mysqli_query($con, $query);
-
-                                                    if(mysqli_num_rows($query_run) > 0)
-                                                    {
-                                                        foreach($query_run as $student)
-                                                        {
-                                                            ?>
-                                                            <tr>
-                                                                <td><?= $student['id']; ?></td>
-                                                                <td><?= $student['title']; ?></td>
-                                                                
-                                                                <td><?= $student['schedule']; ?></td>
-                                                                <td><?= $student['img_path']; ?></td>
-                                                                <td><?= $student['date_created']; ?></td><!-- comment -->
-
-                                                                <td>
-                                                                    <a href="../Admin_Back_End/api/tnc_api/TNCedit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                                                    <form action="../Admin_Back_End/api/tnc_api/code.php" method="POST" class="d-inline">
-                                                                        <button type="submit" name="delete_student" value="<?=$student['id'];?>" class="btn btn-danger btn-sm">Delete</button>
-                                                                    </form>
-                                                                </td>
-                                                            </tr>
-                                                            <?php
-                                                        }
-                                                    }
-                                                    else
-                                                    {
-                                                        echo "<h5> No Record Found </h5>";
-                                                    }
-                                                ?>
-
-                                            </tbody>
-                                        </table>
+                                        
+                                        <table class="table table-stripped text-dark">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="15">
+                            <col width="25">
+                            <col width="25">
+                            <col width="15">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DateTime</th>
+                                <th>Transaction ID</th>
+                                <th>Amount</th>
+                                <th>Order Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                                $i = 1;
+                                $qry = $con->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id where o.client_id = '1' order by unix_timestamp(o.date_created) desc ");
+                                while($row = $qry->fetch_assoc()):
+                            ?>
+                                <tr>
+                                    <td><?php echo $i++ ?></td>
+                                    
+                                    <td><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
+                                    
+                                    <td><a href="javascript:void(0)" class="view_order" data-id="<?php echo $row['id'] ?>"><?php echo md5($row['id']); ?></a></td>
+                                    
+                                    <td><?php echo number_format($row['amount']) ?> </td>
+                                    
+                                    <td class="text-center">
+                                            <?php if($row['status'] == 0): ?>
+                                                <span class="badge badge-light text-dark">Pending</span>
+                                            <?php elseif($row['status'] == 1): ?>
+                                                <span class="badge badge-primary">Packed</span>
+                                            <?php elseif($row['status'] == 2): ?>
+                                                <span class="badge badge-warning">Out for Delivery</span>
+                                            <?php elseif($row['status'] == 3): ?>
+                                                <span class="badge badge-success">Delivered</span>
+                                            <?php else: ?>
+                                                <span class="badge badge-danger">Cancelled</span>
+                                            <?php endif; ?>
+                                        </td>
+                                    </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                       
+                                        
 
                                     </div>
                                 </div>
@@ -232,7 +231,7 @@ include '../User_BE/api/Faq/message.php';
                     
                     <footer class="footer">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Covent: Your Event Planning Partner</span>
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Care4kids</span>
                             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2022. All rights reserved.</span>
                         </div>
                     </footer>

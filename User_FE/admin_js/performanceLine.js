@@ -25,7 +25,7 @@ $(document).ready(function(){
                     var salesTopData = {
                         labels: eventDate,
                         datasets: [{
-                          label: 'Sales Journey Ma',
+                          label: 'Donation',
                           data: totalPrice,
                           backgroundColor: saleGradientBg2,
                           borderColor: [

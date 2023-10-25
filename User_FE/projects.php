@@ -186,7 +186,96 @@ include "../Back_End/db_conn.php";
             </nav>
             
             <!-- Main Panel Body -->
-            <div class="main-panel">
+            <div class="container-fluid">
+  <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-12 mx-auto">
+    <div class="card" id="today_task_card">
+      <div class="card-header">
+        <h3 class="card-title">Your Today's Task(s)</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <ul class="products-list product-list-in-card pl-2 pr-2">
+          <?php 
+          $task_query = $conn->query("SELECT * FROM `reminder_list` where ('".date('Y-m-d')."' BETWEEN `remind_from` and `remind_to` OR `remind_from` = '".date('Y-m-d')."' OR `remind_to` = '".date('Y-m-d')."') and `user_id` = '1' and `status` = 1 ");
+          if($task_query->num_rows > 0):
+          while($row = $task_query->fetch_assoc()):
+          ?>
+          <li class="item">
+            <div class="product-info">
+              <a href="<?= base_url."admin/?page=reminders/view_reminder&id=". $row['id'] ?>" class="product-title"><?= $row['title'] ?></a>
+              <span class="product-description">
+                <p class="text-truncate"><?= $row['description'] ?></p>
+              </span>
+            </div>
+          </li>
+          <?php endwhile; ?>
+          <?php else: ?>
+            <li>
+              <div class="text-muted text-center"><em>No Task Reminder Today.</em></div>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer text-center">
+        <a href="<?= base_url.'admin/?page=reminders' ?>" class="uppercase">View All Task Reminders</a>
+      </div>
+      <!-- /.card-footer -->
+    </div>
+  </div>
+</div>
+            <div class="main-panel"><div class="container-fluid">
+  <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-12 mx-auto">
+    <div class="card" id="today_task_card">
+      <div class="card-header">
+        <h3 class="card-title">Your Today's Task(s)</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body p-0">
+        <ul class="products-list product-list-in-card pl-2 pr-2">
+          <?php 
+          $task_query = $conn->query("SELECT * FROM `reminder_list` where ('".date('Y-m-d')."' BETWEEN `remind_from` and `remind_to` OR `remind_from` = '".date('Y-m-d')."' OR `remind_to` = '".date('Y-m-d')."') and `user_id` = '1' and `status` = 1 ");
+          if($task_query->num_rows > 0):
+          while($row = $task_query->fetch_assoc()):
+          ?>
+          <li class="item">
+            <div class="product-info">
+              <a href="<?= base_url."admin/?page=reminders/view_reminder&id=". $row['id'] ?>" class="product-title"><?= $row['title'] ?></a>
+              <span class="product-description">
+                <p class="text-truncate"><?= $row['description'] ?></p>
+              </span>
+            </div>
+          </li>
+          <?php endwhile; ?>
+          <?php else: ?>
+            <li>
+              <div class="text-muted text-center"><em>No Task Reminder Today.</em></div>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer text-center">
+        <a href="<?= base_url.'admin/?page=reminders' ?>" class="uppercase">View All Task Reminders</a>
+      </div>
+      <!-- /.card-footer -->
+    </div>
+  </div>
+</div>
+                
+                
                 <div class="content-wrapper">
                     <div class="row flex-grow">
                         <div class="col-lg-12 d-flex flex-column">

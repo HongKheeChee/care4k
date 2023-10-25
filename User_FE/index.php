@@ -16,15 +16,15 @@ include '../User_BE/db_conn.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         <!-- plugins:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/feather/feather.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/mdi/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/ti-icons/css/themify-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/typicons/typicons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/feather/feather.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/ti-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/typicons/typicons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/css/vendor.bundle.base.css">
         
         <!-- inject:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/css/vertical-layout-light/style.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
         <link rel="icon" href="../Images/logo.png" />
         
@@ -48,10 +48,10 @@ include '../User_BE/db_conn.php';
 
                     <div>
                         <a class="navbar-brand brand-logo" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                         <a class="navbar-brand brand-logo-mini" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ include '../User_BE/db_conn.php';
                                 <p class="mb-1 mt-3 font-weight-semibold"><?=$_SESSION['name']?></p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                                <a class="dropdown-item" href="../Worker/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2" href=""></i>Sign Out</a>
+                                <a class="dropdown-item" href="../Userlogin/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2" href=""></i>Sign Out</a>
                             </div>
                         </li>
                     </ul>
@@ -137,7 +137,7 @@ include '../User_BE/db_conn.php';
                                 <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="decoration.php">Decorations</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="fun.php">Fun and Entertainment</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/donation/?p=products&c=3c59dc048e8850243be8079a5c74d079">Fun and Entertainment</a></li>
                             </ul>
                         </div>
                         
@@ -145,27 +145,22 @@ include '../User_BE/db_conn.php';
                     <li class="nav-item">
                         <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
                             <i class="menu-icon mdi mdi-layers-outline"></i>
-                            <span class="menu-title">Discount</span>
+                            <span class="menu-title">Event</span>
                         </a>
                     </li>
-                    <li class="nav-item nav-category">Company Management</li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="employee.php" aria-expanded="false" aria-controls="auth">
-                            <i class="menu-icon mdi mdi-account-circle-outline"></i>
-                            <span class="menu-title">Employees</span>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-category">Information Editor</li>
+                    
+                    
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="tnc.php" aria-expanded="false" aria-controls="icons">
                             <i class="menu-icon mdi mdi-file-document"></i>
-                            <span class="menu-title">Terms and Condition</span>
+                            <span class="menu-title">Donation</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
                             <i class="menu-icon mdi mdi-help-circle-outline"></i>
-                            <span class="menu-title">Help</span>
+                            <span class="menu-title">Volunteer</span>
                         </a>
                     </li>
                 </ul>
@@ -197,7 +192,7 @@ include '../User_BE/db_conn.php';
                                                 <div class="card-body">
                                                     <div class="d-sm-flex justify-content-between align-items-start">
                                                         <div>
-                                                            <h4 class="card-title card-title-dash">Sales Line Chart</h4>
+                                                            <h4 class="card-title card-title-dash">Donation Line Chart</h4>
                                                         </div>
                                                         <div id="performance-line-legend"></div>
                                                     </div>
@@ -247,16 +242,17 @@ include '../User_BE/db_conn.php';
                                                         <table class="table select-table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Employee</th>
-                                                                    <th>Task</th>
-                                                                    <th>Progress</th>
+                                                                    <th>no.</th>
+                                                                    <th>Date</th>
+                                                                    <th>Donation Id</th>
+                                                                    <th>Amount</th>
                                                                     <th>Status</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <?php 
+                                                        <?php 
                                 $i = 1;
-                                $qry = $conn->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id where o.client_id = '2' order by unix_timestamp(o.date_created) desc ");
+                                $qry = $conn->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id where o.client_id = '1' order by unix_timestamp(o.date_created) desc ");
                                 while($row = $qry->fetch_assoc()):
                             ?>
                                 <tr>
@@ -306,8 +302,8 @@ include '../User_BE/db_conn.php';
             <!-- partial:partials/_footer.html -->
             <footer class="footer">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Covent: Your Event Planning Partner</span>
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2022. All rights reserved.</span>
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Care4kids</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights reserved.</span>
               </div>
             </footer>
             <!-- partial -->

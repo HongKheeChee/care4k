@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../Admin_Back_End/config.php';
+include '../User_BE/config.php';
 include '../Back_End/db_conn.php';
 ?>
 
@@ -54,8 +54,8 @@ include '../Back_End/db_conn.php';
                 <div class="navbar-menu-wrapper d-flex align-items-top"> 
                     <ul class="navbar-nav">
                         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                            <h1 class="welcome-text">Edit Goodies: <span class="text-black fw-bold">Discount</span></h1>
-                            <h3 class="welcome-sub-text">The friend of every customers</h3>
+                            <h1 class="welcome-text">Event: <span class="text-black fw-bold">Notification</span></h1>
+                            <h3 class="welcome-sub-text"></h3>
                         </li>
                     </ul>
 
@@ -134,17 +134,10 @@ include '../Back_End/db_conn.php';
                         <li class="nav-item">
                             <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-layers-outline"></i>
-                                <span class="menu-title">Discount</span>
+                                <span class="menu-title">Event</span>
                             </a>
                         </li>
-                        <li class="nav-item nav-category">Company Management</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="employee.php" aria-expanded="false" aria-controls="auth">
-                                <i class="menu-icon mdi mdi-account-circle-outline"></i>
-                                <span class="menu-title">Employees</span>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-category">Information Editor</li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="tnc.php">
                                 <i class="menu-icon mdi mdi-file-document"></i>
@@ -154,46 +147,166 @@ include '../Back_End/db_conn.php';
                         <li class="nav-item">
                             <a class="nav-link" href="faq.php">
                                 <i class="menu-icon mdi mdi-help-circle-outline"></i>
-                                <span class="menu-title">Help</span>
+                                <span class="menu-title">Volunteer</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
             
                 <!-- Main Panel Body -->
+                
                 <div class="main-panel">
+                    <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./Phpcalender/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Phpcalender/fullcalendar/lib/main.min.css">
+    <script src="./Phpcalender/js/jquery-3.6.0.min.js"></script>
+    <script src="./Phpcalender/js/bootstrap.min.js"></script>
+    <script src="./Phpcalender/fullcalendar/lib/main.min.js"></script>
+    <style>
+        :root {
+            --bs-success-rgb: 71, 222, 152 !important;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: Apple Chancery, cursive;
+        }
+
+        .btn-info.text-light:hover,
+        .btn-info.text-light:focus {
+            background: #000;
+        }
+        table, tbody, td, tfoot, th, thead, tr {
+            border-color: #ededed !important;
+            border-style: solid;
+            border-width: 1px !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient" id="topNavBar">
+        <div class="container">
+            <a class="navbar-brand" href="">
+            Event
+            </a>
+            
+            <div>
+                <b class="text-light"></b>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5" id="page-container">
+        <div class="row">
+            <div class="col-md-9">
+                <div id="calendar"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="cardt rounded-0 shadow">
+                    <div class="card-header bg-gradient bg-primary text-light">
+                        <h5 class="card-title">Schedule Form</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <form action="save_schedule.php" method="post" id="schedule-form">
+                                <input type="hidden" name="id" value="">
+                                <div class="form-group mb-2">
+                                    <label for="title" class="control-label">Title</label>
+                                    <input type="text" class="form-control form-control-sm rounded-0" name="title" id="title" required>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="description" class="control-label">Description</label>
+                                    <textarea rows="3" class="form-control form-control-sm rounded-0" name="description" id="description" required></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="start_datetime" class="control-label">Start</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="start_datetime" id="start_datetime" required>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="end_datetime" class="control-label">End</label>
+                                    <input type="datetime-local" class="form-control form-control-sm rounded-0" name="end_datetime" id="end_datetime" required>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"><i class="fa fa-save"></i> Save</button>
+                            <button class="btn btn-default border btn-sm rounded-0" type="reset" form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event Details Modal -->
+    <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="event-details-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header rounded-0">
+                    <h5 class="modal-title">Schedule Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body rounded-0">
+                    <div class="container-fluid">
+                        <dl>
+                            <dt class="text-muted">Title</dt>
+                            <dd id="title" class="fw-bold fs-4"></dd>
+                            <dt class="text-muted">Description</dt>
+                            <dd id="description" class=""></dd>
+                            <dt class="text-muted">Start</dt>
+                            <dd id="start" class=""></dd>
+                            <dt class="text-muted">End</dt>
+                            <dd id="end" class=""></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="modal-footer rounded-0">
+                    <div class="text-end">
+                        <button type="button" class="btn btn-primary btn-sm rounded-0" id="edit" data-id="">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm rounded-0" id="delete" data-id="">Delete</button>
+                        <button type="button" class="btn btn-secondary btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event Details Modal -->
+
+<?php 
+$schedules = $conn->query("SELECT * FROM `schedule_list`");
+$sched_res = [];
+foreach($schedules->fetch_all(MYSQLI_ASSOC) as $row){
+    $row['sdate'] = date("F d, Y h:i A",strtotime($row['start_datetime']));
+    $row['edate'] = date("F d, Y h:i A",strtotime($row['end_datetime']));
+    $sched_res[$row['id']] = $row;
+}
+?>
+<?php 
+if(isset($conn)) $conn->close();
+?>
+</body>
+<script>
+    var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+</script>
+<script src="./Phpcalender/js/script.js"></script>
+
+</html>
+
                     <div class="content-wrapper">
                         <div class="row" style="margin-top:2%; width:100%; padding:30px;">
-                            <div class="d-flex flex-row justify-content-lg-end">
-                                <button type="button" class="btn btn-primary btn-icon-text col-lg-2 mb-4" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#discountModal">
-                                    <i class="ti-plus btn-icon-prepend"></i>
-                                    Add Discount
-                                </button>
-                            </div>
                             
-                            <div class="card card-rounded border border-success border-2">
-                                <div  class="card-body">
-                                    <h4 class="card-title">Activated Discount</h4>
-                                    <p class="card-description">
-                                        These discount will be usable from the calculation in quotation.
-                                    </p>
-                                    <div id="activatedDiscount" class="flex-row d-flex">
-                                        <script src="display_discount.js"></script>
-                                    </div>
-                                </div>
-                            </div>
                             
-                            <div class="card card-rounded border border-danger border-2 mt-xl-4">
-                                <div class="card-body">
-                                    <h4 class="card-title">Paused Discount</h4>
-                                    <p class="card-description">
-                                        The deactivated discount will be shown here.
-                                    </p>
-                                    <div id="deactivatedDiscount" class="flex-row d-flex text-center">
-                                        <script src="display_discountDisabled.js"></script>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     
@@ -311,13 +424,14 @@ include '../Back_End/db_conn.php';
 
                     <footer class="footer">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Covent: Your Event Planning Partner</span>
-                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2022. All rights reserved.</span>
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Care4kids</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights reserved.</span>
                         </div>
                     </footer>
                 </div>
             </div>
         </div>
+        
 
       
         <script src="../Admin_Front_End/admin_design/vendors/js/vendor.bundle.base.js"></script>

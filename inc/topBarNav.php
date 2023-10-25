@@ -23,7 +23,7 @@
                         <?php endif; ?>
                         <li class="nav-item"><a class="nav-link" href="/charity/employ/index.php">Volunteer</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url ?>admin/index.php">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/charity/Worker/register.php">User</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/charity/Userlogin/login.php">User</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                     </div>

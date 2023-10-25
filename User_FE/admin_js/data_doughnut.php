@@ -21,7 +21,7 @@ $result7 = mysqli_query($conn, $query7);
 
 $data = array();
 foreach($result1 as $row){
-    $data['Birthday Party'] = $row['COUNT(parent_id)'];
+    $data['Penang Shan Childrens Home'] = $row['COUNT(parent_id)'];
 }
 foreach($result2 as $row){
     $data['Wedding Ceremony'] = $row['COUNT(parent_id)'];

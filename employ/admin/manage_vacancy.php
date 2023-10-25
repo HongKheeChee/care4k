@@ -20,7 +20,7 @@ if(isset($_GET['id'])){
 		<div class="row form-group">
 			<div class="col-md-8">
 				<label class="control-label">Availability</label>
-				<input type="number" name="availability" min='1' class="form-control text-right" value="<?php echo isset($availability) ? $availability:'' ?>">
+				<input type="number" name="availability" min='1' class="form-control text-left" value="<?php echo isset($availability) ? $availability:'' ?>">
 			</div>
 		</div>
 		<?php if(isset($id)): ?>

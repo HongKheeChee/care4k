@@ -124,7 +124,7 @@
                         <div class="dropdown-menu">
                             <a class="text-white dropdown-item display-7" href="#book">Service</a>
                             <a class="text-white dropdown-item display-7" href="#process">Process</a>
-                            <a class="text-white dropdown-item display-7" href="#tnc">T&C</a>
+                            <a class="text-white dropdown-item display-7" href="/charity/volunteer/index.php">Volunteer</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown open">
@@ -166,13 +166,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                         <li class="nav-item dropdown open">
-                            <a class="nav-link link text-white display-7" href="home.php" data-toggle="dropdown-submenu" aria-expanded="true">
+                            <a class="nav-link link text-white display-7" href="/charity/index.php" data-toggle="dropdown-submenu" aria-expanded="true">
                                 Home
                             </a>	
                             <div class="dropdown-menu">
-                                <a class="text-white dropdown-item display-7" href="#book">Service</a>
-                                <a class="text-white dropdown-item display-7" href="#process">Process</a>
-                                <a class="text-white dropdown-item display-7" href="#tnc">T&C</a>
+                                <a class="text-white dropdown-item display-7" href="http://localhost/charity/?p=events">Event</a>
+                                <a class="text-white dropdown-item display-7" href="/charity/donation/index.php">Donation</a>
+                                <a class="text-white dropdown-item display-7" href="/charity/employ/index.php">Volunteer</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown open">
@@ -196,9 +196,11 @@
             <div class="mbr-overlay"></div>
             <div class="container">
                 <h1 class="display-2"></h1>
-                <h3 class="text-center text-black mb-4 text-primary fw-bold display-2">Login</h3>
+                <h3 class="text-center text-black mb-4 text-primary fw-bold display-2">user Login</h3>
+                <h4>Enter login info here</h4>
                 <div class="login">
-                    <form action="authenticate.php" method="post">
+                    <form action="./authenticate.php" method="post">
+                        
                         <label for="username">
                             <i class="fas fa-user"></i>
                         </label>
@@ -248,61 +250,7 @@
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Links  -->
-                <section class="" style="background-color: #1d1d1d">
-                    <div class="container text-center text-md-start mt-5">
-                        <!-- Grid row -->
-                        <div class="row mt-3">
-                            <!-- Grid column -->
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <!-- Content -->
-                                <h6 class="text-uppercase fw-bold">Covent.Co</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white; height: 2px"/>
-                                <p class="text-white">
-                                    Event Planning System. <br>
-                                    We hope to bring properity and convenience to people.
-                                </p>
-                            </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <!-- Links -->
-                                <h6 class="text-uppercase fw-bold">Management</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white; height: 2px"/>
-                                <p>
-                                    <a href="../Worker/login.php" class="text-white">Admin</a>
-                                </p>
-                                <p>
-                                    <a href="../Worker/login.php" class="text-white">Employee</a>
-                                </p>
-                            </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <!-- Links -->
-                                <h6 class="text-uppercase fw-bold">Contact</h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white; height: 2px"/>
-                                <p class="text-white"><i class="fas fa-home mr-3 text-white"></i>1-Z, Lebuh Bukit Jambul, Bukit Jambul, 11900 Bayan Lepas, Pulau Pinang</p>
-                                <p class="text-white"><i class="fas fa-envelope mr-3 text-white"></i> covent@abc.com</p>
-                                <p class="text-white"><i class="fas fa-phone mr-3 text-white"></i> + 012 3456 789</p>
-                                <p class="text-white"><i class="fas fa-print mr-3 text-white"></i> + 987 6543 210</p>
-                            </div>
-                            <!-- Grid column -->
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                <h6 class="text-uppercase fw-bold"></h6>
-                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #1d1d1d; height: 2px"/>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127102.08141870704!2d100.31088906372248!3d5.426080021913311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac048a161f277%3A0x881c46d428b3162c!2sINTI%20International%20College%20Penang!5e0!3m2!1sen!2smy!4v1666240539168!5m2!1sen!2smy" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                            <!-- Grid column -->
-                        </div>
-                        <!-- Grid row -->
-                    </div>
-                </section>
-                <!-- Section: Links  -->
-                <!-- Copyright -->
-                <div class="text-center p-3" style="background-color: black">
-                    © 2022 Made By:
-                    <a class="text-white" href="">COVENT.Co</a>
-                </div>
+                
                 <!-- Copyright -->
             </footer>
             <!-- Footer -->

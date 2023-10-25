@@ -50,7 +50,7 @@ if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email) VALU
 	$stmt->execute();
 	echo 'You have successfully registered, you can now login!';
         
-        header('Location: ../Admin_Front_End/employee.php');
+        header('Location: ../User_FE/employee.php');
 } else {
 	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 	echo 'Could not prepare statement!';

@@ -23,14 +23,14 @@ include '../User_BE/api/Faq/message.php';
         <!-- inject:css -->
         <link rel="stylesheet" href="../Admin_Front_End/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
-        <link rel="icon" href="../Images/logo.png" />
+        <link rel="icon" href="/User_BE/uploads/c4k Logo.jpg" />
         
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         
         
-        <title>Covent</title>
+        <title>volunteer</title>
     </head>
     <body>
         <div class="container-scroller">
@@ -47,10 +47,10 @@ include '../User_BE/api/Faq/message.php';
 
                     <div>
                         <a class="navbar-brand brand-logo" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                         <a class="navbar-brand brand-logo-mini" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                     </div>
                 </div>
@@ -200,27 +200,20 @@ window.onclick = function(event) {
                         <li class="nav-item">
                             <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-layers-outline"></i>
-                                <span class="menu-title">Discount</span>
+                                <span class="menu-title">Event</span>
                             </a>
                         </li>
-                        <li class="nav-item nav-category">Company Management</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="employee.php" aria-expanded="false" aria-controls="auth">
-                                <i class="menu-icon mdi mdi-account-circle-outline"></i>
-                                <span class="menu-title">Employees</span>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-category">Information Editor</li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="tnc.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Terms and Condition</span>
+                                <span class="menu-title">Donation</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
                                 <i class="menu-icon mdi mdi-help-circle-outline"></i>
-                                <span class="menu-title">volunteer</span>
+                                <span class="menu-title">Volunteer</span>
                             </a>
                         </li>
                     </ul>
@@ -234,47 +227,12 @@ window.onclick = function(event) {
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-header">
-                                            <h4>FAQ Details
-                                                <a href="../Admin_Back_End/api/Faq/FAQcreate.php" class="btn btn-primary float-end">Add FAQ</a>
+                                            <h4>Volunteer
+                                                <a href="http://localhost/charity/employ/index.php" class="btn btn-primary float-end">Volunteer</a>
                                             </h4>
                                         </div>
                                         <div class="card-body" style="overflow: auto">
-                                            <table class="table table-bordered table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID</th>
-                                                        <th>Question</th>
-                                                        <th>Answer</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php
-                                                    
-                                                    $query = "SELECT * FROM application";
-                                                    $query_run = mysqli_query($con, $query);
-                                                    if (mysqli_num_rows($query_run) > 0) {
-                                                        foreach ($query_run as $student) {
-                                                            ?>
-                                                            <tr>
-                                                                <td><?= $student['id']; ?></td>
-                                                                <td><?= $student['position_id']; ?></td>
-                                                                <td><?= $student['date_created']; ?></td>
-                                                                <td>
-                                                                    <a href="../Admin_Back_End/api/Faq/FAQedit.php?faq_id=<?= $student['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                                                    <form action="../Admin_Back_End/api/Faq/code.php" method="POST" class="d-inline">
-                                                                        <button type="submit" name="delete_student" value="<?= $student['id']; ?>" class="btn btn-danger btn-sm">Delete</button>
-                                                                    </form>
-                                                                </td>
-                                                            </tr>
-                                                            <?php
-                                                        }
-                                                    } else {
-                                                        echo "<h5> No Record Found </h5>";
-                                                    }
-                                                    ?>
-                                                </tbody>
-                                            </table>
+                                            
                                             
                                             <table class="table table-bordered table-hover">
 							<colgroup>
@@ -289,6 +247,7 @@ window.onclick = function(event) {
 									<th class="text-center">Applicant Information</th>
 									<th class="text-center">Status</th>
 									<th class="text-center">Action</th>
+                                                                        <th class="text-center">Date</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -310,7 +269,7 @@ window.onclick = function(event) {
 									$awhere .= " and a.position_id = '".$_GET['position_id']."' ";
 
 								}
-								$application = $con->query("SELECT a.*,v.position FROM application a inner join vacancy v on v.id = a.position_id $awhere order by a.id asc");
+								$application = $con->query("SELECT a.*,v.position FROM application a inner join vacancy v on v.id = a.position_id where a.position_id = '7' $awhere order by a.id asc");
 								while($row=$application->fetch_assoc()):
 								?>
 								<tr>
@@ -327,6 +286,9 @@ window.onclick = function(event) {
 										<button class="btn btn-sm btn-primary edit_application" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
 										<button class="btn btn-sm btn-danger delete_application" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
+                                                                        <td class="text-center">
+										<?php echo $row['date_created'] ?>
+									</td>
 								</tr>
 								<?php endwhile; ?>
 							</tbody>
@@ -340,8 +302,8 @@ window.onclick = function(event) {
                     
                     <footer class="footer">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Covent: Your Event Planning Partner</span>
-                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2022. All rights reserved.</span>
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Care4kids</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights reserved.</span>
                         </div>
                     </footer>
                 </div>

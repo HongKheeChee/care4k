@@ -55,7 +55,14 @@ body {
         
         
         <?php require_once('welcome_content.html') ?>
-        
+        <body> 
+
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Bl1FOKpFY2Q?autoplay=1&mute=1" allowfullscreen></iframe>
+</div>
+<br>
+</body>    
 <div class="card-group">
   <div class="card">
     <img src="./uploads/HD-wallpaper-colorful-houses-colorful-houses.jpg" class="card-img-top" alt="...">

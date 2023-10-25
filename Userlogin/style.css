@@ -6,7 +6,9 @@
   	-moz-osx-font-smoothing: grayscale;
 }
 body {
-  	background-color: white;
+  	background-color: white; 
+        background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+
   	margin: 0;
 }
 .register {

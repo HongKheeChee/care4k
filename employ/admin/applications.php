@@ -156,6 +156,7 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 	$(".edit_application").click(function(){
 		uni_modal("Edit Application","manage_application.php?id="+$(this).attr('data-id'),"mid-large")
 	})
+        
 	$(".view_application").click(function(){
 		uni_modal("","view_application.php?id="+$(this).attr('data-id'),"mid-large")
 	})

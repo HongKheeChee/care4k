@@ -38,14 +38,14 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-		header('Location: ../Admin_Front_End/index.php');
+		header('Location: ../User_FE/index.php');
             }
             else{
                 session_regenerate_id();
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-		header('Location: worker_home.php');
+		header('Location: ../User_FE/index.php');
             }
 	} else {
 		// Incorrect password

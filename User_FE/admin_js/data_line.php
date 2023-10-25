@@ -2,7 +2,7 @@
 session_start();
 include '../../Back_End/db_conn.php';
 
-$query = sprintf("SELECT date_created, amount FROM orders ORDER BY date_created");
+$query = sprintf("SELECT date_created, amount FROM orders where client_id ='1' ORDER BY date_created");
 
 $result = mysqli_query($conn, $query);
 

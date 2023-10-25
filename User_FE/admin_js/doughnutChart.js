@@ -4,7 +4,7 @@ $(document).ready(function(){
         type: "GET",
         success: function(myData){
             var data = JSON.parse(myData);
-            var birthday = data['Birthday Party'];
+            var birthday = data['Penang Shan Childrens Home'];
             var farewell = data['Farewell Ceremony'];
             var wedding = data['Wedding Ceremony'];
             var christmas = data['Christmas Celebration'];
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
                   // These labels appear in the legend and in the tooltips when hovering different arcs
                   labels: [
-                    'Birthday Party',
+                    'Penang Shan Childrens Home',
                     'Farewell Ceremony',
                     'Wedding Ceremony',
                     'Christmas Celebration',

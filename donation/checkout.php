@@ -24,19 +24,19 @@ $total = 0;
                     <div class="form-group d-flex pl-2">
                         <div class="custom-control custom-radio">
                           <input class="custom-control-input custom-control-input-primary" type="radio" id="customRadio4" name="order_type" value="2" checked="">
-                          <label for="customRadio4" class="custom-control-label">For Delivery</label>
+                          <label for="customRadio4" class="custom-control-label">For Pick up & deliver to respective home </label>
                         </div>
                         <div class="custom-control custom-radio ml-3">
                           <input class="custom-control-input custom-control-input-primary custom-control-input-outline" type="radio" id="customRadio5" name="order_type" value="1">
-                          <label for="customRadio5" class="custom-control-label">For Pick up</label>
+                          <label for="customRadio5" class="custom-control-label">For Delivery to respective home</label>
                         </div>
                       </div>
                         <div class="form-group col address-holder">
-                            <label for="" class="control-label">Delivery Address</label>
+                            <label for="" class="control-label">Pick up Address</label>
                             <textarea id="" cols="30" rows="3" name="delivery_address" class="form-control" style="resize:none"><?php echo $_settings->userdata('default_delivery_address') ?></textarea>
                         </div>
                         <div class="col">
-                            <span><h4><b>Total:</b> <?php echo number_format($total) ?></h4></span>
+                            <span><h4><b>Total:Rm</b> <?php echo number_format($total) ?></h4></span>
                         </div>
                         <hr>
                         <div class="col my-3">

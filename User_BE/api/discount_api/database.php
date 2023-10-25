@@ -3,7 +3,7 @@ class database{
   
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "covent";
+    private $db_name = "dummy_db";
     private $username = "root";
     private $password = "";
     public $conn;

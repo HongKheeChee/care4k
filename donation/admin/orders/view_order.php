@@ -106,7 +106,7 @@ if($order->num_rows > 0){
                 <?php if(!isset($_GET['view'])): ?>
                 <div class="col-3"></div>
                 <div class="col">
-                    <button type="button" id="update_status" class="btn btn-sm btn-flat btn-primary">Update Status</button>
+                    <button type="button" id="update_status" class="btn btn-sm btn-flat btn-primary"><p style="color:white;">Update Status</p></button>
                 </div>
                 <?php endif; ?>
                 

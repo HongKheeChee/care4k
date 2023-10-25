@@ -1,7 +1,9 @@
 <?php
 session_start();
-include '../Admin_Back_End/config.php';
-include '../Back_End/db_conn.php';
+include '../User_BE/config.php';
+include '../User_BE/api/item_api/database.php';
+include '../User_BE/api/item_api/header.php';
+include '../User_BE/api/item_api/footer.php';
 ?>
 
 <!DOCTYPE html>
@@ -124,7 +126,7 @@ include '../Back_End/db_conn.php';
                             <div class="collapse" id="editservice">
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Items</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="decoration.php">Decorations</a></li>
                                     <li class="nav-item"> <a class="nav-link" href="fun.php">Fun and Entertainment</a></li>
                                 </ul>
@@ -159,12 +161,18 @@ include '../Back_End/db_conn.php';
                         </li>
                     </ul>
                 </nav>
+                
+
+
+
             
                 <!-- Main Panel Body -->
+                
                 <div class="main-panel">
                     <div class="content-wrapper">
                         <div class="row">
                             <div class="d-flex flex-row justify-content-lg-end mt-xl-5">
+                                
                                 <button type="button" class="btn btn-primary btn-icon-text col-lg-2" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#itemModal">
                                     <i class="ti-plus btn-icon-prepend"></i>
                                     New Item
@@ -178,6 +186,88 @@ include '../Back_End/db_conn.php';
                                     <p class="card-description">
                                         Requirements and Accessories 
                                     </p>
+                                    
+<div class="col-lg-12">
+	<div class="card card-outline card-primary">
+		<div class="card-body">
+			<div class="d-flex w-100 px-1 py-2 justify-content-center align-items-center">
+				<label for="">Enter Tracking Number</label>
+				<div class="input-group col-sm-5">
+                    <input type="search" id="ref_no" class="form-control form-control-sm" placeholder="Type the tracking number here">
+                    <div class="input-group-append">
+                        <button type="button" id="track-btn" class="btn btn-sm btn-primary btn-gradient-primary">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<div class="timeline" id="parcel_history">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div id="clone_timeline-item" class="d-none">
+	<div class="iitem">
+	    <i class="fas fa-box bg-blue"></i>
+	    <div class="timeline-item">
+	      <span class="time"><i class="fas fa-clock"></i> <span class="dtime">12:05</span></span>
+	      <div class="timeline-body">
+	      	asdasd
+	      </div>
+	    </div>
+	  </div>
+</div>
+<script>
+	function track_now(){
+		start_load()
+		var tracking_num = $('#ref_no').val()
+		if(tracking_num == ''){
+			$('#parcel_history').html('')
+			end_load()
+		}else{
+			$.ajax({
+				url:'ajax.php?action=get_parcel_heistory',
+				method:'POST',
+				data:{ref_no:tracking_num},
+				error:err=>{
+					console.log(err)
+					alert_toast("An error occured",'error')
+					end_load()
+				},
+				success:function(resp){
+					if(typeof resp === 'object' || Array.isArray(resp) || typeof JSON.parse(resp) === 'object'){
+						resp = JSON.parse(resp)
+						if(Object.keys(resp).length > 0){
+							$('#parcel_history').html('')
+							Object.keys(resp).map(function(k){
+								var tl = $('#clone_timeline-item .iitem').clone()
+								tl.find('.dtime').text(resp[k].date_created)
+								tl.find('.timeline-body').text(resp[k].status)
+								$('#parcel_history').append(tl)
+							})
+						}
+					}else if(resp == 2){
+						alert_toast('Unkown Tracking Number.',"error")
+					}
+				}
+				,complete:function(){
+					end_load()
+				}
+			})
+		}
+	}
+	$('#track-btn').click(function(){
+		track_now()
+	})
+	$('#ref_no').on('search',function(){
+		track_now()
+	})
+</script>
                                     <div class="table-responsive">
                                       <table id="ItemList" class="table table-hover">
                                         <thead>
@@ -302,6 +392,8 @@ include '../Back_End/db_conn.php';
                 </div>
             </div>
         </div>
+        
+        
 
       
         <script src="../Admin_Front_End/admin_design/vendors/js/vendor.bundle.base.js"></script>
