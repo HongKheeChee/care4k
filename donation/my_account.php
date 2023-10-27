@@ -33,9 +33,13 @@
                             ?>
                                 <tr>
                                     <td><?php echo $i++ ?></td>
+                                    
                                     <td><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
+                                    
                                     <td><a href="javascript:void(0)" class="view_order" data-id="<?php echo $row['id'] ?>"><?php echo md5($row['id']); ?></a></td>
+                                    
                                     <td><?php echo number_format($row['amount']) ?> </td>
+                                    
                                     <td class="text-center">
                                             <?php if($row['status'] == 0): ?>
                                                 <span class="badge badge-light text-dark">Pending</span>

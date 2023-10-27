@@ -49,6 +49,8 @@
 						<?php else: ?>
 							<button class="btn btn-block col-md-4 btn-primary btn-sm float-right" type="button" disabled="" id="">Application Closed</button>
 						<?php endif; ?>
+                                                        
+                                                        <br></br>
 
 				</div>
 			</div>

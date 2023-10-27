@@ -1,8 +1,8 @@
 <div class="container-fluid">
-    <form id="status-update-form">
+    <form id="status-update-form" bg=light>
         <input type="hidden" name="id" value="<?php echo $_GET['oid'] ?>">
         <div class="form-group">
-            <label for="" class="control-label">Status</label>
+            <label for="" class="control-label"><p style="color:white;">Status</p></label>
             <select name="status" id="" class="custom-select custol-select-sm">
                 <option value="0" <?php echo $_GET['status'] == 0 ? "selected" : '' ?>>Pending</option>
                 <option value="1" <?php echo $_GET['status'] == 1 ? "selected" : '' ?>>Packed</option>

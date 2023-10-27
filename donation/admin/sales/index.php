@@ -34,7 +34,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
         <div id="printable">
             <div>
                 <h4 class="text-center m-0"><?php echo $_settings->info('name') ?></h4>
-                <h3 class="text-center m-0"><b>Sales Report</b></h3>
+                <h3 class="text-center m-0"><b>Inkind Donation Report</b></h3>
                 <p class="text-center m-0">Date Between <?php echo $date_start ?> and <?php echo $date_end ?></p>
                 <hr>
             </div>
@@ -49,12 +49,12 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>no.</th>
                         <th>Date Time</th>
-                        <th>Book</th>
+                        <th>Item</th>
                         <th>Client</th>
-                        <th>QTY</th>
-                        <th>Amount</th>
+                        <th>Qty</th>
+                        <th>Price(RM)</th>
                     </tr>
                 </thead>
                 <tbody>

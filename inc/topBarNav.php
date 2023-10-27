@@ -23,12 +23,14 @@
                         <?php endif; ?>
                         <li class="nav-item"><a class="nav-link" href="/charity/employ/index.php">Volunteer</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url ?>admin/index.php">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url ?>user/index.php">User</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/charity/Userlogin/login.php">User</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                     </div>
                 </div>
+                
                 <button class="btn btn-flat btn-primary" type="button" id="donation">Donate Now</button>
+                
                 <form class="form-inline ml-4 mr-2 pl-2" id="search-form">
                   <div class="input-group">
                     <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
@@ -59,6 +61,7 @@
       if(sTxt != '')
         location.href = './?p=search&search='+sTxt;
     })
+    
     $('#donation').click(function(){
       uni_modal('Donation','donate.php')
     })

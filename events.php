@@ -1,3 +1,4 @@
+
 <style>
     .img-thumb {
         width:13.5vw !important;
@@ -103,6 +104,7 @@ img {vertical-align: middle;}
 
 
 <section class="py-5">
+    
     <div class="container">
         <h3 class='text-center' style="color:white;">Upcoming Events</h3>
         <hr>

@@ -39,6 +39,7 @@
                         </p>
                       </a>
                     </li>
+
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=blogs" class="nav-link nav-blogs">
                         <i class="nav-icon fas fa-blog"></i>
@@ -56,6 +57,26 @@
                         </p>
                       </a>
                     </li>
+
+                    <li class="nav-header">Task</li>
+                    
+                    <li class="nav-item dropdown">
+                      <a href="/Phpcalender/index.php" class="nav-link nav-events">
+                        <i class="nav-icon fas fa-calendar-day"></i>
+                        <p>
+                          Event Notify
+                        </p>
+                      </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a href="/noti/index.php" class="nav-link nav-events">
+                        <i class="nav-icon fas fa-calendar-day"></i>
+                        <p>
+                          Task Notify
+                        </p>
+                      </a>
+                    </li>
                     
                     <li class="nav-header">Donation</li>
                     <li class="nav-item dropdown">
@@ -66,7 +87,14 @@
                         </p>
                       </a>
                     </li>
-                    
+                    <li class="nav-item dropdown">
+                      <a href="/charity/courier/index.php" class="nav-link nav-events">
+                        <i class="nav-icon fas fa-th-list"></i>
+                        <p>
+                          Courier Menu
+                        </p>
+                      </a>
+                    </li>
                     
                     
                     <li class="nav-header">Volunteer</li>
@@ -93,7 +121,7 @@
                       <a href="<?php echo base_url ?>admin/?page=user/list" class="nav-link nav-user/list">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                          User List
+                          Staff List
                         </p>
                       </a>
                     </li>

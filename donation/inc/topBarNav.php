@@ -76,18 +76,26 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <?php 
                         $cat_qry = $conn->query("SELECT * FROM categories where status = 1  limit 3");
+                        
                         $count_cats =$conn->query("SELECT * FROM categories where status = 1 ")->num_rows;
+                        
                         while($crow = $cat_qry->fetch_assoc()):
+                            
                           $sub_qry = $conn->query("SELECT * FROM sub_categories where status = 1 and parent_id = '{$crow['id']}'");
                           if($sub_qry->num_rows <= 0):
+                              
                         ?>
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="./?p=products&c=<?php echo md5($crow['id']) ?>"><?php echo $crow['category'] ?></a></li>
                         
                         <?php else: ?>
+
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" id="navbarDropdown<?php echo $crow['id'] ?>" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><?php echo $crow['category'] ?></a></a>
-                            <ul class="dropdown-menu  p-0" aria-labelledby="navbarDropdown<?php echo $crow['id'] ?>">
+                            
+                          <ul class="dropdown-menu  p-0" aria-labelledby="navbarDropdown<?php echo $crow['id'] ?>">
+                                
                               <?php while($srow = $sub_qry->fetch_assoc()): ?>
+                                
                                 <li><a class="dropdown-item border-bottom" href="./?p=products&c=<?php echo md5($crow['id']) ?>&s=<?php echo md5($srow['id']) ?>"><?php echo $srow['sub_category'] ?></a></li>
                             <?php endwhile; ?>
                             </ul>
@@ -95,10 +103,11 @@
                         <?php endif; ?>
                         <?php endwhile; ?>
                         <?php if($count_cats > 3): ?>
-                        <li class="nav-item"><a class="nav-link" href="./?p=view_categories">All Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./?p=view_categories">All Shelter category</a></li>
                         <?php endif; ?>
                         <li class="nav-item"><a class="nav-link" href="./?p=about">About</a></li>&nbsp;
-                        <li class="nav-item"><a class="nav-link" href="/charity/donation/admin/login.php">Admin</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="/charity/donation/admin/login.php">Staff</a></li>
                     </ul>
                      <form class="form-inline" id="search-form">
                   <div class="input-group">

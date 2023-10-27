@@ -103,7 +103,7 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/charity/employ/admin/index.php">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/charity/Userlogin/login.php">Login</a></li>
                         
                      
                     </ul>
@@ -142,7 +142,7 @@
       <div class="modal-body">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()"></button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
       </div>
@@ -189,6 +189,8 @@
   <p></p><!-- comment -->
   <p></p><!-- comment -->
   <p></p>
+  <br></br>
+  
        <?php include('footer.php') ?>
     </body>
 

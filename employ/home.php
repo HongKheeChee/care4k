@@ -55,7 +55,7 @@ span.hightlight{
                 
                 
                 
-                <h4 class="text-center">Vacancy List</h4>
+                <h4 class="text-center">Volunteer List</h4>
                 <hr class="divider">
                 <?php
                 $vacancy = $conn->query("SELECT * FROM vacancy order by date(date_created) desc ");
@@ -77,11 +77,13 @@ span.hightlight{
 </style>
                     <div class="card-body">
                         <h3><b class="filter-txt"><?php echo $row['position'] ?></b></h3>
-                        <span><small>Needed: <?php echo $row['availability'] ?></small></span>
+                        <span><small>Needed: <?php echo $row['availability'] ?></small>
+                        <br>
+                        <small>Date created: <?php echo $row['date_created'] ?></small></span>
                         <hr>
                         <larger class="truncate filter-txt"><?php echo strip_tags($desc) ?></larger>
                         <br>
-                        <hr class="divider"  style="max-width: calc(50%)">
+                        <hr class="divider"  style="max-width: calc(150%)">
 
                     </div>
                 </div>

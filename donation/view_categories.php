@@ -24,8 +24,22 @@ elseif(isset($_GET['s'])){
     }
 }
 ?>
+
+<head>
+<style>
+body {
+  background-image: url('.//uploads/Colourful hill.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
 <!-- Header-->
 <header class="bg-dark py-5" id="main-header">
+    
+    
+    
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder"><?php echo $title ?></h1>
@@ -37,6 +51,15 @@ elseif(isset($_GET['s'])){
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-2 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-2 justify-content-center">
+            
+            <style>
+body {
+  background-image: url('.//uploads/Colourful hill.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
            
             <?php 
                 $whereData = "";

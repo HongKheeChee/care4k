@@ -79,7 +79,7 @@ elseif(isset($_GET['s'])){
                             }
                         ?>
                     
-                    <div class="row gx-2 gx-lg-2 row-cols-1 row-cols-md-3 row-cols-xl-3">
+                    <div class="row gx-2 gx-lg-2 row-cols-1 row-cols-md-4 row-cols-xl-5">
                     
                         <?php 
                             $whereData = "";
@@ -110,8 +110,9 @@ elseif(isset($_GET['s'])){
                                     $inv[] = number_format($ir['price']);
                                 }
                         ?>
+                        <div class="card-deck">
                         <div class="col-md-12 mb-5">
-                            <div class="card product-item">
+                            <div class="card h-100 product-item">
                                 <!-- Product image-->
                                 <img class="card-img-top w-100" src="<?php echo validate_image($img) ?>" loading="lazy" alt="..." />
                                 <!-- Product details-->
@@ -126,6 +127,7 @@ elseif(isset($_GET['s'])){
                                     </div>
                                     <p class="m-0"><small>By: <?php echo $row['author'] ?></small></p>
                                 </div>
+                                
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-white">
                                     <div class="text-center">
@@ -135,6 +137,7 @@ elseif(isset($_GET['s'])){
                                 </div>
                             </div>
                         </div>
+                        </div>     
                         <?php endwhile; ?>
                         <?php 
                             if($products->num_rows <= 0){
