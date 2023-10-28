@@ -99,6 +99,9 @@
     <!-- <script src="<?php echo base_url ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
     <!-- AdminLTE App -->
     <script src="<?php echo base_url ?>dist/js/adminlte.js"></script>
+
+    
+
     <div class="daterangepicker ltr show-ranges opensright">
       <div class="ranges">
         <ul>

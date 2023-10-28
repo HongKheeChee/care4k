@@ -8,6 +8,9 @@
         </div>
     </div>
 </header>
+
+
+
 <!-- Section-->
 <style>
     .book-cover{
@@ -35,7 +38,7 @@ body {
             
             
             <?php 
-                $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand() limit 8 ");
+                $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand() limit 9 ");
                 while($row = $products->fetch_assoc()):
                     $upload_path = base_app.'/uploads/product_'.$row['id'];
                     $img = "";

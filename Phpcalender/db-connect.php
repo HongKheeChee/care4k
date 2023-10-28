@@ -2,7 +2,7 @@
 $host     = 'localhost';
 $username = 'root';
 $password = '';
-$dbname   ='dummy_db';
+$dbname   ='book_shop_db';
 
 $conn = new mysqli($host, $username, $password, $dbname);
 if(!$conn){

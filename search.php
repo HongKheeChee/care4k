@@ -61,12 +61,12 @@
             <div class="col-lg-4 border-left">
                 <p>Try others keywords
 
-<p><a href="https://www.w3schools.com/">1.Penang Shan Children's Home</a></p>
+<p><a href="http://localhost/charity/pages/penang_shan_.php">1.Penang Shan Children's Home</a></p>
 <p><a href="http://localhost/charity/pages/seri_cahaya_welfare_home_penang.php">2.Seri Cahaya Welfare Home Penang</a></p>
 <p><a href="http://localhost/charity/pages/the_salvation.php">3.The Salvation Army Penang Children's Home</a></p><!-- comment -->
 <p><a href="http://localhost/charity/pages/ru_yi_home_(children%E2%80%99s_home).php">4.Ru Yi Home (Children’s Home)</a></p><!-- comment -->
 <p><a href="/charity/pages/st.josephs_home.php">5.ST. Josephs Home</a></p><!-- comment -->
-<p><a href="https://www.w3schools.com/"></a></p><!-- comment -->
+
 
 
 
@@ -94,7 +94,7 @@ Rumah Kebajikan Vallar Malaysia
 Pusat Jagaan Kanak-Kanak Shammah
 Pertubuhan Penyayang CHI YUN </pre>
                     
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae massa quis tellus ullamcorper auctor at in mi. Vestibulum euismod, nulla sit amet rhoncus iaculis, sapien justo sodales purus, nec finibus massa massa eget ante. Maecenas vitae eros in purus dictum porttitor. Integer arcu dui, dictum ac tellus et, ultricies condimentum est. Maecenas rutrum erat tincidunt dui rutrum fermentum. Nullam pretium molestie gravida. Sed mi justo, porta id justo ac, ornare aliquam est. Cras porta nisi eu eleifend tincidunt. Donec malesuada interdum orci sit amet sollicitudin. Maecenas sed augue condimentum justo vulputate interdum vel in lacus.</p>
+                     </p>
             </div>
        </div>
     </div>

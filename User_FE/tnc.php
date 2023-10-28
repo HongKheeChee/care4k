@@ -15,15 +15,15 @@ include '../User_BE/api/Faq/message.php';
         <!-- plugins:css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/feather/feather.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/mdi/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/ti-icons/css/themify-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/typicons/typicons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/feather/feather.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/ti-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/typicons/typicons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/css/vendor.bundle.base.css">
         
         <!-- inject:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/css/vertical-layout-light/style.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
         <link rel="icon" href="../Images/logo.png" />
         
@@ -240,15 +240,15 @@ include '../User_BE/api/Faq/message.php';
         </div>
 
       
-        <script src="../Admin_Front_End/admin_design/vendors/js/vendor.bundle.base.js"></script>
-        <script src="../Admin_Front_End/admin_design/vendors/chart.js/Chart.min.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/off-canvas.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/hoverable-collapse.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/template.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/settings.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="../Admin_Front_End/admin_js/performanceLine.js" type="text/javascript"></script>
-        <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
+        <script src="../User_FE/admin_design/vendors/js/vendor.bundle.base.js"></script>
+        <script src="../User_FE/admin_design/vendors/chart.js/Chart.min.js"></script>
+        <script src="../User_FE/admin_design/js/off-canvas.js"></script>
+        <script src="../User_FE/admin_design/js/hoverable-collapse.js"></script>
+        <script src="../User_FE/admin_design/js/template.js"></script>
+        <script src="../User_FE/admin_design/js/settings.js"></script>
+        <script src="../User_FE/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="../User_FE/admin_js/performanceLine.js" type="text/javascript"></script>
+        <script src="../User_FE/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
         
         <script type="text/javascript">
             $(document).ready(function(){

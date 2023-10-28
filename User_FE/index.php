@@ -158,8 +158,8 @@ include '../User_BE/db_conn.php';
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
-                            <i class="menu-icon mdi mdi-help-circle-outline"></i>
+                        <a class="nav-link" href="volunt.php" aria-expanded="false" aria-controls="icons">
+                            <i class="menu-icon mdi mdi-account-multiple"></i>
                             <span class="menu-title">Volunteer</span>
                         </a>
                     </li>

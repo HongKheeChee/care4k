@@ -21,18 +21,18 @@ include "../Back_End/db_conn.php";
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
         <script src="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css"></script>
         <!-- plugins:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/feather/feather.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/mdi/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/ti-icons/css/themify-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/typicons/typicons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/feather/feather.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/ti-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/typicons/typicons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/css/vendor.bundle.base.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
         
         <!-- End plugin css for this page -->
         <!-- inject:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/css/vertical-layout-light/style.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <link rel="icon" href="../Images/logo.png">
         
         <title>Covent</title>
@@ -575,13 +575,13 @@ include "../Back_End/db_conn.php";
 
       <!-- End plugin js for this page -->
       <!-- inject:js -->
-      <script src="../Admin_Front_End/admin_design/js/off-canvas.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/hoverable-collapse.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/template.js"></script>
-      <script src="../Admin_Front_End/admin_design/js/settings.js"></script>
+      <script src="../User_FE/admin_design/js/off-canvas.js"></script>
+      <script src="../User_FE/admin_design/js/hoverable-collapse.js"></script>
+      <script src="../User_FE/admin_design/js/template.js"></script>
+      <script src="../User_FE/admin_design/js/settings.js"></script>
       <!-- endinject -->
       <!-- Custom js for this page-->
-      <script src="../Admin_Front_End/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
+      <script src="../User_FE/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
       <!-- End custom js for this page-->
     </body>
 
