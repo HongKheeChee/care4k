@@ -111,7 +111,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#top">Home</a>
+                        <a class="nav-link click-scroll" href="../charity/indexpg.php">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -157,7 +157,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             </div>
         </div>
     </nav>
-
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5 ">
                 <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -198,7 +198,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </form>
             </div>
             
-        </nav>
+        </nav> -->
 <script>
   $(function(){
     $('#login-btn').click(function(){

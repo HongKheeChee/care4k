@@ -34,7 +34,7 @@ $total = 0;
                         </div>
                       </div>
                         <div class="form-group col address-holder">
-                            <label for="" class="control-label">Pick up Address</label>
+                            <label for="" class="control-label">Delivery note</label>
                             <textarea id="" cols="30" rows="3" name="delivery_address" class="form-control" style="resize:none"><?php echo $_settings->userdata('default_delivery_address') ?></textarea>
                         </div>
                         <div class="col">

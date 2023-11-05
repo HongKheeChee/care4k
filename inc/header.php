@@ -62,6 +62,7 @@
     <script src="<?php echo base_url ?>dist/js/script.js"></script>
     <script src="<?php echo base_url ?>assets/js/scripts.js"></script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="<?php echo base_url ?>display_discount_cta.js"></script>
 
     <style>
     #main-header{

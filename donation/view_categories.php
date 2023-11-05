@@ -1,6 +1,6 @@
 <?php 
-$title = "All Items Categories";
-$sub_title = "";
+$title = "All Shelter Categories";
+$sub_title = "Check out daily needs of each shelter here";
 if(isset($_GET['c']) && isset($_GET['s'])){
     $cat_qry = $conn->query("SELECT * FROM categories where md5(id) = '{$_GET['c']}'");
     if($cat_qry->num_rows > 0){

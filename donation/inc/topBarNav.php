@@ -161,7 +161,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     
-            <div class="container-fluid px-4 px-lg-5 ">
+         <!--   <div class="container-fluid px-4 px-lg-5 ">
                 <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <a class="navbar-brand" href="./">
                 <img src="<?php echo validate_image($_settings->info('logo')) ?>" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -223,7 +223,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <a href="/charity/donation/index.php">Donation Page</a>
     <a href="/charity/employ/index.php">Volunteer Page</a>
   </div>
-</div>
+</div>-->
                 &nbsp;&nbsp;
 
                
@@ -232,7 +232,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         
                         
                         &nbsp;&nbsp;
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./">Home</a></li>
+                       <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="./">Home</a></li>-->
                         
                         &nbsp;&nbsp;
                         <?php 
@@ -284,7 +284,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                       <?php if(!isset($_SESSION['userdata']['id'])): ?>
                         <button class="btn btn-outline-dark ml-2" id="login-btn" type="button">Login</button>
                         <?php else: ?>
-                        <a class="text-dark mr-2 nav-link" href="./?p=volun">
+                        <!--<a class="text-dark mr-2 nav-link" href="./?p=volun">
                             <i class="bi-cart-fill me-1"></i>
                             Volunteer
                             <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">
@@ -297,7 +297,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                               endif;
                               ?>
                             </span>
-                        </a><a class="text-dark mr-2 nav-link" href="./?p=cart">
+                        </a>-->
+                        <a class="text-dark mr-2 nav-link" href="./?p=cart">
                             <i class="bi-cart-fill me-1"></i>
                             Donation Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">
@@ -313,6 +314,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </a>
                         
                             <a href="./?p=my_account" class="text-dark  nav-link"><b> Hi, <?php echo $_settings->userdata('firstname')?>!</b></a>
+                            <a></a>
                             <a href="logout.php" class="text-dark  nav-link"><i class="fa fa-sign-out-alt"></i></a>
                         <?php endif; ?>
                     </div>

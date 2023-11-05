@@ -95,7 +95,10 @@
         var new_total = 0
         start_loader();
         if($type == 'minus'){
-            qty = parseInt(qty) - 1
+            qty = parseInt(qty) - 1;
+            if (qty < 0) {
+        qty = 0; // Ensure $qty is not negative
+    }
         }else{
             qty = parseInt(qty) + 1
         }

@@ -51,6 +51,13 @@
 
      <!-- jQuery -->
     <script src="<?php echo base_url ?>plugins/jquery/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
     <!-- jQuery UI 1.11.4 -->
     <script src="<?php echo base_url ?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- SweetAlert2 -->

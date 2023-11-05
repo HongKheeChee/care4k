@@ -2,13 +2,13 @@
 session_start();
 include '../../Back_End/db_conn.php';
 
-$query1 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query2 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query3 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query4 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query5 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query6 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
-$query7 = sprintf("SELECT COUNT(parent_id) FROM sub_categories WHERE parent_id = '21'");
+$query1 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '0' AND client_id ='4'");
+$query2 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '1' AND client_id ='4'");
+$query3 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '2' AND client_id ='4'");
+$query4 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '5' AND client_id ='4'");
+$query5 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '3' AND client_id ='4'");
+$query6 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '4' AND client_id ='4'");
+$query7 = sprintf("SELECT COUNT(status) FROM orders WHERE status = '6' AND client_id ='4'");
 
 $result1 = mysqli_query($conn, $query1);
 $result2 = mysqli_query($conn, $query2);
@@ -21,25 +21,25 @@ $result7 = mysqli_query($conn, $query7);
 
 $data = array();
 foreach($result1 as $row){
-    $data['Penang Shan Childrens Home'] = $row['COUNT(parent_id)'];
+    $data['Pending'] = $row['COUNT(status)'];
 }
 foreach($result2 as $row){
-    $data['Wedding Ceremony'] = $row['COUNT(parent_id)'];
+    $data['Packed'] = $row['COUNT(status)'];
 }
 foreach($result3 as $row){
-    $data['Farewell Ceremony'] = $row['COUNT(parent_id)'];
+    $data['Out for Delivery'] = $row['COUNT(status)'];
 }
 foreach($result4 as $row){
-    $data['Christmas Celebration'] = $row['COUNT(parent_id)'];
+    $data['Picked up'] = $row['COUNT(status)'];
 }
 foreach($result5 as $row){
-    $data['New Year Celebration'] = $row['COUNT(parent_id)'];
+    $data['Delivered'] = $row['COUNT(status)'];
 }
 foreach($result6 as $row){
-    $data['Deepavali Celebration'] = $row['COUNT(parent_id)'];
+    $data['Cancelled'] = $row['COUNT(status)'];
 }
 foreach($result7 as $row){
-    $data['Raya Aidilfitri Celebration'] = $row['COUNT(parent_id)'];
+    $data['Raya Aidilfitri Celebration'] = $row['COUNT(status)'];
 }
 
 $result1->close();

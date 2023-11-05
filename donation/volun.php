@@ -84,7 +84,7 @@ $qry = $conn->query("SELECT * FROM vacancy ");
 								$application = $conn->query("SELECT a.*,v.position 
                                                             FROM application a 
                                                             inner join vacancy v on v.id = a.position_id 
-                                                            where a.position_id = '7' 
+                                                            where a.firstname = 'hong' 
                                                             $awhere order by a.id asc");
                                                             
 								while($row=$application->fetch_assoc()):

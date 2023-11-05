@@ -22,11 +22,11 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
         <!-- CSS FILES -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
 
-        <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+        <link href="../css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
         
         <style amp-custom>
@@ -229,19 +229,19 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#top">Home</a>
+                        <a class="nav-link click-scroll" href="/charity/indexpg.php">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="../charity/indexpg.php#section_2">Abouts</a>
+                        <a class="nav-link click-scroll" href="/charity/indexpg.php#section_2">Abouts</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="../charity/indexpg.php#section_3">Causes</a>
+                        <a class="nav-link click-scroll" href="/charity/indexpg.php#section_3">Causes</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="../charity/indexpg.php#section_4">Volunteer</a>
+                        <a class="nav-link click-scroll" href="/charity/indexpg.php#section_4">Volunteer</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -277,93 +277,15 @@ https://templatemo.com/tm-581-kind-heart-charity
     </nav>
 
     <body>
-        <amp-sidebar id="sidebar" class="cid-qMPJVgmmGW" layout="nodisplay" side="right">
-            <div class="builder-sidebar" id="builder-sidebar">
-                <button on="tap:sidebar.close" class="close-sidebar">
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item dropdown open">
-                        <a class="nav-link link text-white display-7" href="../Front_End/home.php" data-toggle="dropdown-submenu" aria-expanded="true">
-                            Home
-                        </a>	
-                        <div class="dropdown-menu">
-                            <a class="text-white dropdown-item display-7" href="#book">Service</a>
-                            <a class="text-white dropdown-item display-7" href="#process">Process</a>
-                            <a class="text-white dropdown-item display-7" href="/charity/volunteer/index.php">Volunteer</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown open">
-                        <a class="nav-link link text-white display-7" href="../Help/Faq.php" data-toggle="dropdown-submenu" aria-expanded="true">
-                            Help
-                        </a>	
-                    </li>
-                </ul>
-            </div>
-        </amp-sidebar>
+        
 
-        <!-- Google Analytics -->
-        <amp-analytics type="googleanalytics" id="analytics1">
-            <script type="application/json">
-                {
-                "vars": {
-                "account": "UA-63126154-1"
-                },
-                "triggers": {
-                "trackPageview": {
-                "on": "visible",
-                "request": "pageview"
-                }
-                }
-                }
-            </script>
-        </amp-analytics>
-        <!-- /Google Analytics -->
-
-        <section class="menu horizontal-menu cid-qMPJVgmmGW" id="menu1-5">
-            <nav class="navbar navbar-dropdown  navbar-fixed-top navbar-expand-lg">
-                <div class="navbar-brand">
-                    <span class="navbar-caption-wrap">
-                        <a class="navbar-caption text-white display-5">
-                            <img src="../Images/coventco.jpg" alt="logo" onclick="location.href='home.php'"/>
-                        </a>
-                    </span>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                        <li class="nav-item dropdown open">
-                            <a class="nav-link link text-white display-7" href="/charity/index.php" data-toggle="dropdown-submenu" aria-expanded="true">
-                                Home
-                            </a>	
-                            <div class="dropdown-menu">
-                                <a class="text-white dropdown-item display-7" href="http://localhost/charity/?p=events">Event</a>
-                                <a class="text-white dropdown-item display-7" href="/charity/donation/index.php">Donation</a>
-                                <a class="text-white dropdown-item display-7" href="/charity/employ/index.php">Volunteer</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown open">
-                            <a class="nav-link link text-white display-7" href="../Help/Faq.php" data-toggle="dropdown-submenu" aria-expanded="true">
-                                Help
-                            </a>	
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- AMP plug -->
-            <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </section>
+        
         
         <section class="header2 cid-qMPFA6jKDg mbr-fullscreen" id="header2-1">
             <div class="mbr-overlay"></div>
             <div class="container">
                 <h1 class="display-2"></h1>
-                <h3 class="text-center text-green mb-4 text-primary fw-bold display-2">User Login</h3>
+                <h3 class="navbar-brand text-center ">User Login</h3>
                 <h4></h4>
                 <div class="login">
                     <form action="./authenticate.php" method="post">
@@ -376,52 +298,21 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <i class="fas fa-lock"></i>
                         </label>
                         <input type="password" name="password" placeholder="Password" id="password" required>
-                        <input type="submit" value="Login">
+                        <p>Not have an account?<a href='register.php' ><u> Register here</u></a></p>
+                        
+                        <br>
+                        
+                        
+                        <button type="submit" method="post"  class="custom-btn btn">Login</button>
+                        <div>
+                            <br>
+                        <p>Forgot password?<a href="forgot-password.php"><u>Click here<u></a></p>
                     </form>
                 </div>
             </div>
         </section>
         
-        <div>
-            <!-- Footer -->
-            <footer class="text-center text-lg-start text-white" style="background-color: #1d1d1d">
-                <!-- Section: Social media -->
-                <section class="d-flex justify-content-between p-4" style="background-color: black">
-                    <!-- Left -->
-                    <div class="me-5">
-                        <span style="color:white;">Get connected with us on social networks:</span>
-                    </div>
-                    <!-- Left -->
-                    <!-- Right -->
-                    <div>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="" class="text-white me-4">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <!-- Right -->
-                </section>
-                <!-- Section: Social media -->
-                <!-- Section: Links  -->
-                
-                <!-- Copyright -->
-            </footer>
-            <!-- Footer -->
-        </div>
+        
         <!-- End of .container -->
     </body>
 </html>

@@ -9,11 +9,11 @@
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/fontawesome-free/css/all.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url ?>css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?php echo base_url ?>css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="<?php echo base_url ?>css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <!-- Ionicons -->
     <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
     <!-- Tempusdominus Bootstrap 4 -->
@@ -40,7 +40,11 @@
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/summernote/summernote-bs4.min.css">
 
-    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
      <!-- SweetAlert2 -->
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
@@ -54,7 +58,11 @@
     <!-- jQuery UI 1.11.4 -->
     <script src="<?php echo base_url ?>plugins/jquery-ui/jquery-ui.min.js"></script>
 
-    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
     <!-- SweetAlert2 -->
     <script src="<?php echo base_url ?>plugins/sweetalert2/sweetalert2.min.js"></script>

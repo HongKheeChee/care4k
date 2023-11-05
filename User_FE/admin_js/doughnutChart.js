@@ -4,12 +4,12 @@ $(document).ready(function(){
         type: "GET",
         success: function(myData){
             var data = JSON.parse(myData);
-            var birthday = data['Penang Shan Childrens Home'];
-            var farewell = data['Farewell Ceremony'];
-            var wedding = data['Wedding Ceremony'];
-            var christmas = data['Christmas Celebration'];
-            var newyear = data['New Year Celebration'];
-            var deepavali =  data['Deepavali Celebration'];
+            var birthday = data['Pending'];
+            var farewell = data['Packed'];
+            var wedding = data['Out for Delivery'];
+            var christmas = data['Picked up'];
+            var newyear = data['Delivered'];
+            var deepavali =  data['Cancelled'];
             var raya = data['Raya Aidilfitri Celebration'];
             
             if ($("#doughnutChart").length) {
@@ -40,13 +40,13 @@ $(document).ready(function(){
 
                   // These labels appear in the legend and in the tooltips when hovering different arcs
                   labels: [
-                    'Penang Shan Childrens Home',
-                    'Farewell Ceremony',
-                    'Wedding Ceremony',
-                    'Christmas Celebration',
-                    'New Year Celebration',
-                    'Deepavali Celebration',
-                    'Raya Aidilfitri Celebration'
+                    'Pending',
+                    'Packed',
+                    'Out for Delivery',
+                    'Picked up',
+                    'Delivered',
+                    'Cancelled',
+                    ''
                   ]
                 };
                 var doughnutPieOptions = {

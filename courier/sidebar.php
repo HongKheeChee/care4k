@@ -4,7 +4,7 @@
         <?php if($_SESSION['login_type'] == 1): ?>
         <h3 class="text-center p-0 m-0"><b>ADMIN</b></h3>
         <?php else: ?>
-        <h3 class="text-center p-0 m-0"><b>STAFF</b></h3>
+        <h3 class="text-center p-0 m-0"><b>User</b></h3>
         <?php endif; ?>
 
     </a>
@@ -13,6 +13,7 @@
     <div class="sidebar pb-4 mb-4">
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+            
           <li class="nav-item dropdown">
             <a href="./" class="nav-link nav-home">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -22,7 +23,15 @@
             </a>
           </li>     
           <?php if($_SESSION['login_type'] == 1): ?>
-            
+            <h>Admin Main Menu</h>
+          <li class="nav-item dropdown">
+            <a href="http://localhost/charity/admin/index.php" class="nav-link nav-reports">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+              Admin Main Menu
+              </p>
+            </a>
+          </li> 
           <li class="nav-item">
             <a href="#" class="nav-link nav-edit_branch">
               <i class="nav-icon fas fa-building"></i>
@@ -69,7 +78,7 @@
               </li>
             </ul>
           </li>
-        <?php endif; ?>
+        
           <li class="nav-item">
             <a href="#" class="nav-link nav-edit_parcel">
               <i class="nav-icon fas fa-boxes"></i>
@@ -104,6 +113,7 @@
             <?php endforeach; ?>
             </ul>
           </li>
+          <?php endif; ?>
            <li class="nav-item dropdown">
             <a href="./index.php?page=track" class="nav-link nav-track">
               <i class="nav-icon fas fa-search"></i>
@@ -120,15 +130,7 @@
               </p>
             </a>
           </li>
-          <h>Admin Main Menu</h>
-          <li class="nav-item dropdown">
-            <a href="http://localhost/charity/admin/index.php" class="nav-link nav-reports">
-              <i class="nav-icon fas fa-file"></i>
-              <p>
-              Admin Main Menu
-              </p>
-            </a>
-          </li>    
+          
         </ul>
       </nav>
     </div>

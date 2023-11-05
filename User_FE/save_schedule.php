@@ -15,7 +15,7 @@ if(empty($id)){
 }
 $save = $conn->query($sql);
 if($save){
-    echo "<script> alert('Schedule Successfully Saved.'); location.replace('./discount.php') </script>";
+    echo "<script> alert('Schedule Successfully Saved.'); location.replace('./event.php') </script>";
 }else{
     echo "<pre>";
     echo "An Error occured.<br>";

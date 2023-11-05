@@ -23,7 +23,7 @@ class accounts{
     // create acc
     function create(){
         // query to insert record
-        $query = "INSERT INTO " . $this->table_name . " SET username=:username, password=:password, email=:email";
+        $query = "INSERT INTO " . $this->table_name . " SET username=:username, password=:password, email=:email" ;
         // prepare query
         $stmt = $this->conn->prepare($query);
         // sanitize 

@@ -32,10 +32,10 @@
     <div class="modal-dialog modal-md modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title">Confirmation</h5>
+        <h4 <p style="color:white;" class="modal-title">Confirmation</p></h4>
       </div>
       <div class="modal-body">
-        <div id="delete_content"></div>
+        <div style="color:white;" id="delete_content"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>

@@ -12,15 +12,15 @@ include '../Back_End/db_conn.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- plugins:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/feather/feather.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/mdi/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/ti-icons/css/themify-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/typicons/typicons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/feather/feather.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/ti-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/typicons/typicons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/simple-line-icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/vendors/css/vendor.bundle.base.css">
         
         <!-- inject:css -->
-        <link rel="stylesheet" href="../Admin_Front_End/admin_design/css/vertical-layout-light/style.css">
+        <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
         <link rel="icon" href="../Images/logo.png" />
         
@@ -163,10 +163,13 @@ include '../Back_End/db_conn.php';
             
                 <!-- Main Panel Body -->
                 <div class="main-panel">
+                
+
+
                 <head>
     <title>Notification Using PHP AJAX</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
@@ -176,7 +179,7 @@ include '../Back_End/db_conn.php';
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">PHP AJAX NOTIFICATION REALTIME</a>
+                    <a class="navbar-brand" href="#">PHP AJAX </a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -259,13 +262,15 @@ include '../Back_End/db_conn.php';
 
     });
 </script>
-                    <div class="content-wrapper">
+                    
+                                
+                                
+<div class="content-wrapper">
                         
                         <div class="row">
                             
                             <div class="d-flex flex-row justify-content-lg-end mt-xl-5">
-                                
-                                <button type="button" class="btn btn-primary btn-icon-text col-lg-2" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#fndModal">
+                            <button type="button" class="btn btn-primary btn-icon-text col-lg-2" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#fndModal">
                                     <i class="ti-plus btn-icon-prepend"></i>
                                     New Package
                                 </button>
@@ -273,8 +278,7 @@ include '../Back_End/db_conn.php';
                             
                             <div class="col-lg-12 grid-margin stretch-card mt-xl-5">
                                 <div class="card">
-                                  <div class="card-body">
-                                    
+                                  <div class="card-body">     
                                     <h4 class="card-title">Packages</h4>
                                     
 
@@ -420,15 +424,15 @@ include '../Back_End/db_conn.php';
         </div>
 
       
-        <script src="../Admin_Front_End/admin_design/vendors/js/vendor.bundle.base.js"></script>
-        <script src="../Admin_Front_End/admin_design/vendors/chart.js/Chart.min.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/off-canvas.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/hoverable-collapse.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/template.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/settings.js"></script>
-        <script src="../Admin_Front_End/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="../Admin_Front_End/admin_js/performanceLine.js" type="text/javascript"></script>
-        <script src="../Admin_Front_End/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
+        <script src="../User_FE/admin_design/vendors/js/vendor.bundle.base.js"></script>
+        <script src="../User_FE/admin_design/vendors/chart.js/Chart.min.js"></script>
+        <script src="../User_FE/admin_design/js/off-canvas.js"></script>
+        <script src="../User_FE/admin_design/js/hoverable-collapse.js"></script>
+        <script src="../User_FE/admin_design/js/template.js"></script>
+        <script src="../User_FE/admin_design/js/settings.js"></script>
+        <script src="../User_FE/admin_design/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="../User_FE/admin_js/performanceLine.js" type="text/javascript"></script>
+        <script src="../User_FE/admin_js/doughnutChart.js?v=<?=$version?>" type="text/javascript"></script>
         
         <script type="text/javascript">
             $(document).ready(function(){

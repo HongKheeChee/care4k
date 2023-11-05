@@ -61,7 +61,7 @@
         </strong>
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
-          <b><?php echo $_settings->info('short_name') ?> (by: <a href="" target="blank"></a> )</b> v1.0
+          <b><?php echo $_settings->info('short_name') ?> (by:c4k <a href="" target="blank"></a> )</b> v1.0
         </div>
       </footer>
     </div>
@@ -89,6 +89,13 @@
     <script src="<?php echo base_url ?>plugins/daterangepicker/daterangepicker.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="<?php echo base_url ?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
     <!-- Summernote -->
     <script src="<?php echo base_url ?>plugins/summernote/summernote-bs4.min.js"></script>
     <script src="<?php echo base_url ?>plugins/datatables/jquery.dataTables.min.js"></script>

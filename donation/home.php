@@ -38,7 +38,7 @@ body {
             
             
             <?php 
-                $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand() limit 9 ");
+                $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand()  ");
                 while($row = $products->fetch_assoc()):
                     $upload_path = base_app.'/uploads/product_'.$row['id'];
                     $img = "";

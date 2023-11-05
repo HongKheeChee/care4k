@@ -166,58 +166,60 @@ window.onclick = function(event) {
             
                 <!--Left Sidebar-->
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">
-                                <i class="mdi mdi-grid-large menu-icon"></i>
-                                <span class="menu-title">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-category">Projects</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.php" aria-expanded="false" aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-floor-plan"></i>
-                                <span class="menu-title">Manage Tasks</span>
-                            </a>
-                        </li>
-                        <li class="nav-item nav-category">Service Management</li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#editservice" aria-expanded="false" aria-controls="form-elements">
-                                <i class="menu-icon mdi mdi-card-text-outline"></i>
-                                <span class="menu-title">Edit Service</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                            <div class="collapse" id="editservice">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="decoration.php">Decorations</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="fun.php">Fun and Entertainment</a></li>
-                                </ul>
-                            </div>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
-                                <i class="menu-icon mdi mdi-layers-outline"></i>
-                                <span class="menu-title">Event</span>
-                            </a>
-                        </li>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notif.php" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="menu-icon mdi mdi-mail"></i>
+                            <span class="menu-title">Notification</span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#editservice" aria-expanded="false" aria-controls="form-elements">
+                            <i class="menu-icon mdi mdi-card-text-outline"></i>
+                            <span class="menu-title">Help</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="editservice">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Donation Tracking</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="conu.php">Contact Us</a></li>
+                            </ul>
+                        </div>
                         
-                        <li class="nav-item">
-                            <a class="nav-link" href="tnc.php" aria-expanded="false" aria-controls="icons">
-                                <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Donation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
-                                <i class="menu-icon mdi mdi-help-circle-outline"></i>
-                                <span class="menu-title">Volunteer</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.php" aria-expanded="false" aria-controls="icons">
+                            <i class="menu-icon mdi mdi-layers-outline"></i>
+                            <span class="menu-title">Event</span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.php" aria-expanded="false" aria-controls="icons">
+                            <i class="menu-icon mdi mdi-file-document"></i>
+                            <span class="menu-title">Donation</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="volunt.php" aria-expanded="false" aria-controls="icons">
+                            <i class="menu-icon mdi mdi-account-multiple"></i>
+                            <span class="menu-title">Volunteer</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             
                 <!-- Main Panel Body -->
                 <div class="main-panel">
@@ -246,7 +248,7 @@ window.onclick = function(event) {
 									<th class="text-center">#</th>
 									<th class="text-center">Applicant Information</th>
 									<th class="text-center">Status</th>
-									<th class="text-center">Action</th>
+									
                                                                         <th class="text-center">Date</th>
 								</tr>
 							</thead>
@@ -254,6 +256,7 @@ window.onclick = function(event) {
 								<?php 
 								$i = 1;
 								$stats = $con->query("SELECT * FROM recruitment_status order by id asc");
+                                $currentAcc = $_SESSION['name'];
 								$stat_arr[0] = "New";
 								while ($row = $stats->fetch_assoc()) {
 									$stat_arr[$row['id']] = $row['status_label'];
@@ -269,7 +272,9 @@ window.onclick = function(event) {
 									$awhere .= " and a.position_id = '".$_GET['position_id']."' ";
 
 								}
-								$application = $con->query("SELECT a.*,v.position FROM application a inner join vacancy v on v.id = a.position_id where a.position_id = '7' $awhere order by a.id asc");
+								$application = $con->query("SELECT a.*,v.position FROM application a inner join vacancy v on v.id = a.position_id 
+                                where a.firstname = '$currentAcc' $awhere order by a.id asc");
+
 								while($row=$application->fetch_assoc()):
 								?>
 								<tr>
@@ -281,11 +286,11 @@ window.onclick = function(event) {
 									<td class="text-center">
 										<?php echo $stat_arr[$row['process_id']] ?>
 									</td>
-									<td class="text-center">
+									<!--<td class="text-center">
 										<button class="btn btn-sm btn-primary view_application" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
 										<button class="btn btn-sm btn-primary edit_application" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
 										<button class="btn btn-sm btn-danger delete_application" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
-									</td>
+									</td>-->
                                                                         <td class="text-center">
 										<?php echo $row['date_created'] ?>
 									</td>

@@ -147,7 +147,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="http://localhost/charity/?p=articles&t=e4da3b7fbbce2345d7772b0674a318d5">Shelter</a>
+                        <a class="nav-link click-scroll" href="/charity/index.php">Shelter</a>
                     </li>
 
                     <li class="nav-item ms-3">
@@ -226,7 +226,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-10 col-12 text-center mx-auto">
-                        <h2 class="mb-5">Welcome to Kind Heart Charity</h2>
+                        <h2 class="mb-5">Welcome to Care4kids</h2>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
@@ -422,17 +422,19 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="images/causes/group-african-kids-paying-attention-class.jpg"
-                                class="custom-block-image img-fluid" alt="">
+                            <img src="images/causes/downloadedu.jpg"
+                                class="custom-block-image img-fluid" alt="edu">
 
                             <div class="custom-block">
                                 <div class="custom-block-body">
-                                    <h5 class="mb-3">Children Education</h5>
+                                    <h5 class="mb-3">Education and Skill Development</h5>
 
-                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
+                                    <p>support this cause by facilitating donations for educational materials,
+                                        providing a platform for volunteers to offer tutoring or mentoring, 
+                                        and promoting events that focus on educational enrichment.</p>
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="75"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
@@ -456,18 +458,18 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="images/causes/poor-child-landfill-looks-forward-with-hope.jpg"
+                            <img src="images/causes/download (5).jpg"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
                                 <div class="custom-block-body">
-                                    <h5 class="mb-3">Poverty Development</h5>
+                                    <h5 class="mb-3">Nutrition and Healthcare</h5>
 
-                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                        tempor</p>
+                                    <p>enable donors to contribute funds or resources for nutritious meals, medical check-ups, and healthcare supplies. 
+                                        Volunteers can also assist in organizing health camps or nutrition programs.</p>
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
+                                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="50"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
@@ -491,35 +493,36 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="custom-block-wrap">
-                            <img src="images/causes/african-woman-pouring-water-recipient-outdoors.jpg"
+                            <img src="images/causes/download.jpg"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
                                 <div class="custom-block-body">
-                                    <h5 class="mb-3">Supply drinking water</h5>
+                                    <h5 class="mb-3">Cultural and Recreational Activities</h5>
 
-                                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                    <p>help in organizing and promoting events and activities that enrich the lives of these children. 
+                                        This may include art and music classes, outings to cultural events, or even sports and games.
                                     </p>
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-100" role="progressbar" aria-valuenow="100"
+                                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="100"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
                                     <div class="d-flex align-items-center my-2">
                                         <p class="mb-0">
                                             <strong>Raised:</strong>
-                                            $84,600
+                                            Rm 100
                                         </p>
 
                                         <p class="ms-auto mb-0">
                                             <strong>Goal:</strong>
-                                            $100,000
+                                            Rm 10,000
                                         </p>
                                     </div>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="donate.html" class="custom-btn btn">Join our event</a>
                             </div>
                         </div>
                     </div>
@@ -808,15 +811,20 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 Clean Water
                             </a>
                         </div>
+                        <script src="index.js"></script>
 
-                        <form class="custom-form subscribe-form" action="#" method="post" role="form">
+
+                        <form class="custom-form subscribe-form"  method="post" role="form">
                             <h5 class="mb-4">Newsletter Form</h5>
 
-                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
+                            <input type="name" name="subscribe-email" id="sname" 
+                                class="form-control" placeholder="Name" required>
+
+                            <input type="email" name="subscribe-email" id="semail" pattern="[^ @]*@[^ @]*"
                                 class="form-control" placeholder="Email Address" required>
 
                             <div class="col-lg-12 col-12">
-                                <button type="submit" class="form-control">Subscribe</button>
+                                <button onclick="sendMail()" class="form-control">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -955,7 +963,18 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </div>
                         </div>
                     </div>
+                    
+                    <script src="index.js"></script>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("o4SEZjXiGRbKtpI1c");
+      })();
+    </script>
                     <div class="col-lg-5 col-12 mx-auto">
                         <form class="custom-form contact-form" action="#" method="post" role="form">
                             <h2>Contact form</h2>
@@ -965,7 +984,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
+                                    <input type="text" name="first-name" id="name" class="form-control"
                                         placeholder="Jack" required>
                                 </div>
 
@@ -981,7 +1000,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <textarea name="message" rows="5" class="form-control" id="message"
                                 placeholder="What can we help you?"></textarea>
 
-                            <button type="submit" class="form-control">Send Message</button>
+                            <button  onclick="sendMail()" class="form-control">Send Message</button>
                         </form>
                     </div>
 

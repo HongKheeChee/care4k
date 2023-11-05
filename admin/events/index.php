@@ -61,6 +61,14 @@
 	</div>
 </div>
 <script>
+	function _conf(message, confirmFunction, args) {
+    // Your existing code for displaying the confirmation message
+    var confirmationText = $('<div>').addClass('confirmation-text').text(message);
+    }
+    // Rest of your code for displaying confirmation and handling user response
+    // ...
+
+
 	$(document).ready(function(){
 		$('.delete_data').click(function(){
 			_conf("Are you sure to delete this event permanently?","delete_event",[$(this).attr('data-id')])

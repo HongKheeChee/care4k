@@ -100,7 +100,8 @@
           </thead>
           <tbody>
             <tr>
-              <td><input type="text" name='weight[]' value="<?php echo isset($weight) ? $weight :'' ?>" required></td>
+              
+              <td><input type="text" name='weight[]' value="<?php echo isset($weight) ? $weight :'' ?>" ></td>
               <td><input type="text" name='height[]' value="<?php echo isset($height) ? $height :'' ?>" required></td>
               <td><input type="text" name='length[]' value="<?php echo isset($length) ? $length :'' ?>" required></td>
               <td><input type="text" name='width[]' value="<?php echo isset($width) ? $width :'' ?>" required></td>

@@ -166,7 +166,8 @@
                         </li>
     
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn"  id="donation" >Donate</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" href="/charity/Userlogin/login.php" id="donation" >Login</a>
+                            
                         </li>
                     </ul>
                 </div>
@@ -292,7 +293,7 @@
       <div class="modal-body">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()"></button>
+        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
       </div>
