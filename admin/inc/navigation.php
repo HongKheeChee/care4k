@@ -44,7 +44,7 @@
                       <a href="<?php echo base_url ?>admin/?page=blogs" class="nav-link nav-blogs">
                         <i class="nav-icon fas fa-blog"></i>
                         <p>
-                          Blog List
+                          Shelter List
                         </p>
                       </a>
                     </li>

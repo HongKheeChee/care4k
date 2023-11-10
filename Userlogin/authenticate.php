@@ -53,7 +53,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	}
 } else {
 	// Incorrect username
-	echo '<script>alert("Incorrect username and/or password!")</script>';//'<script>alert("Welcome to Geeks for Geeks")</script>';
+	echo '<script>alert("Incorrect username and/or password!")</script>';
 }
 
 	$stmt->close();

@@ -36,9 +36,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <!--
 
-TemplateMo 581 Kind Heart Charity
 
-https://templatemo.com/tm-581-kind-heart-charity
 
 -->
 
@@ -129,17 +127,17 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <li class="nav-item dropdown">
                         <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
                             id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">News</a>
+                            aria-expanded="false">Events</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="news.html">News Listing</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/charity/?p=events">Events Listing</a></li>
 
-                            <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
+                            <li><a class="dropdown-item" href="news-detail.html"></a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/charity/events.php">Events</a>
+                        <a class="nav-link click-scroll" href="http://localhost/charity/?p=events">Contact Us</a>
                     </li>
                     
                     <li class="nav-item">
@@ -151,7 +149,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/charity/index.php">Donate</a>
                     </li>
                 </ul>
             </div>
@@ -168,7 +166,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slide/volunteer-helping-with-donation-box.jpg"
+                                    <img src="images/slide/7eb7.jpg"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -179,7 +177,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg"
+                                    <img src="images/slide/3e2a.jpg"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -190,7 +188,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/medium-shot-people-collecting-donations.jpg"
+                                    <img src="images/slide/b517.jpg"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -261,10 +259,10 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="/charity/donation/index.php" class="d-block">
-                                <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
+                            <a href="/charity/index.php" class="d-block">
+                                <img src="images/icons/event.png" class="featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
+                                <p class="featured-block-text"><strong>Join</strong> Exciting Event</p>
                             </a>
                         </div>
                     </div>
@@ -351,7 +349,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-6 col-md-5 col-12">
-                        <img src="images/download (3).jpg"
+                        <img src="images/image.jpg"
                             class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
                     </div>
 
@@ -573,12 +571,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-12 col-12 mb-5">
-                        <h2>Latest News</h2>
+                        <h2>Upcoming Events</h2>
                     </div>
-        <?php 
-        $events = $conn->query("SELECT * FROM events where date(schedule) >= '".date("Y-m-d")."' order by date(schedule) asc ");
-        while($row = $events->fetch_array()):
-        ?>
+            <?php 
+            $events = $conn->query("SELECT * FROM events where date(schedule) >= '".date("Y-m-d")."' order by date(schedule) asc ");
+            while($row = $events->fetch_array()):
+            ?>
         
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
@@ -703,7 +701,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </button>
                         </form>
 
-                        <h5 class="mt-5 mb-3">Recent news</h5>
+                        <h5 class="mt-5 mb-3">Recent Events</h5>
 
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
@@ -752,35 +750,35 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </div>
 
                         <div class="category-block d-flex flex-column">
-                            <h5 class="mb-3">Categories</h5>
+                            <h5 class="mb-3">Shelters</h5>
 
-                            <a href="#" class="category-block-link">
-                                Drinking water
-                                <span class="badge">20</span>
+                            <a href="http://localhost/charity/pages/house_of_hope.php" class="category-block-link">
+                                House of hope
+                                <span class="badge">2</span>
                             </a>
 
-                            <a href="#" class="category-block-link">
-                                Food Donation
-                                <span class="badge">30</span>
+                            <a href="http://localhost/charity/pages/the_salvation.php" class="category-block-link">
+                                The Salvation Army Penang Childrens Home
+                                <span class="badge">3</span>
                             </a>
 
-                            <a href="#" class="category-block-link">
-                                Children Education
-                                <span class="badge">10</span>
+                            <a href="http://localhost/charity/pages/pusat_jagaan_rumah_charis.php" class="category-block-link">
+                                Pusat Jagaan Rumah Charis
+                                <span class="badge">1</span>
                             </a>
 
                             <a href="#" class="category-block-link">
                                 Poverty Development
-                                <span class="badge">15</span>
+                                <span class="badge">5</span>
                             </a>
 
                             <a href="#" class="category-block-link">
                                 Clothing Donation
-                                <span class="badge">20</span>
+                                <span class="badge">2</span>
                             </a>
                         </div>
 
-                        <div class="tags-block">
+                      <!--  <div class="tags-block">
                             <h5 class="mb-3">Tags</h5>
 
                             <a href="#" class="tags-block-link">
@@ -810,7 +808,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <a href="#" class="tags-block-link">
                                 Clean Water
                             </a>
-                        </div>
+                        </div>-->
                         <script src="index.js"></script>
 
 
@@ -985,17 +983,17 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <input type="text" name="first-name" id="name" class="form-control"
-                                        placeholder="Jack" required>
+                                        placeholder="first name" required>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Doe" required>
+                                        placeholder="last name" required>
                                 </div>
                             </div>
 
                             <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="Jackdoe@gmail.com" required>
+                                placeholder="example@gmail.com" required>
 
                             <textarea name="message" rows="5" class="form-control" id="message"
                                 placeholder="What can we help you?"></textarea>

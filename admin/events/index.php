@@ -7,7 +7,7 @@
 	<div class="card-header">
 		<h3 class="card-title">List of Events</h3>
 		<div class="card-tools">
-			<a href="?page=events/manage_event" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
+			<a href="?page=events/manage_event" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New Event</a>
 		</div>
 	</div>
 	<div class="card-body">

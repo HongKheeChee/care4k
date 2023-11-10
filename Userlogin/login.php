@@ -306,7 +306,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <button type="submit" method="post"  class="custom-btn btn">Login</button>
                         <div>
                             <br>
-                        <p>Forgot password?<a href="forgot-password.php"><u>Click here<u></a></p>
+                        <p>Forgot password?<a href="/charity/php-password-reset-main/forgot-password.php"><u>Click here<u></a></p>
                     </form>
                 </div>
             </div>

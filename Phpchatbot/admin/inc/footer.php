@@ -19,7 +19,7 @@
             })
             end_loader()  
 
-  }
+  }/*
     window.uni_modal = function($title = '' , $url='',$size=""){
         start_loader()
         $.ajax({
@@ -52,7 +52,7 @@
        $('#confirm_modal #confirm').attr('onclick',$func+"("+$params.join(',')+")")
        $('#confirm_modal .modal-body').html($msg)
        $('#confirm_modal').modal('show')
-    }
+    }*/
   })
 </script>
 <footer class="main-footer text-sm">

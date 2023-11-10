@@ -46,7 +46,7 @@
             </a>
 
             <div>
-                <b class="text-light">Sample Scheduling</b>
+                <b href='' class="text-light">Event list</b>
             </div>
         </div>
     </nav>

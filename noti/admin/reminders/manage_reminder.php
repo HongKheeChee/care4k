@@ -9,7 +9,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 }
 ?>
 <div class="pt-2 pb-5 px-2 bg-navy">
-	<h3 class="text-center"><b><?= isset($id) ? "Update Task Reminder Details" : "Add New Task Reminder" ?></b></h3>
+	<h3 class="text-center"><b><?= isset($id) ? "Update Task Reminder Details" : "Add New  Reminder" ?></b></h3>
 </div>
 <div class="card card-outline rounded-0 mt-n4 col-lg-7 col-md-8 col-sm-12 col-xs-12 col-12 mx-auto">
 	<div class="card-body">
