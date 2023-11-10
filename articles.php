@@ -37,7 +37,9 @@ if(isset($_GET['t'])){
                 $limit = 10; 
                 $offset = $page > 0 ? ($page * $limit) : $page;
                 $count_all = $conn->query("SELECT * FROM `blogs` where `status` =1 and md5(`topic_id`) = '{$_GET['t']}' order by unix_timestamp(date_created) desc")->num_rows;
-                $blogs = $conn->query("SELECT b.*,concat(u.firstname,' ',u.lastname) as author FROM `blogs` b inner join `users` u on b.author_id = u.id where b.`status` =1 and md5(b.`topic_id`) = '{$_GET['t']}' order by unix_timestamp(b.date_created) desc limit $limit offset $offset");
+                $blogs = $conn->query("SELECT b.*,concat(u.firstname,' ',u.lastname) as author 
+                FROM `blogs` b inner join `users` u on b.author_id = u.id where b.`status` =1 and md5(b.`topic_id`) = '{$_GET['t']}' 
+                order by unix_timestamp(b.date_created) desc limit $limit offset $offset");
                 while($row=$blogs->fetch_assoc()):
                     ?>
                         <a class="list-group-item list-group-item-action my-2 border" href="<?php echo base_url.$row['blog_url'] ?>">

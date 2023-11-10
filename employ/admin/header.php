@@ -21,6 +21,8 @@
   <link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   <link href="assets/css/select2.min.css" rel="stylesheet">
 
+  
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -40,6 +42,8 @@
     <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
   <script type="text/javascript" src="assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
+
+  
 
 
 

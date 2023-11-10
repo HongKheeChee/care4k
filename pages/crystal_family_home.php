@@ -1,4 +1,6 @@
 <?php require_once('../config.php'); ?>
+<?php require_once('../inc/topBarNav.php'); ?>
+
 <!DOCTYPE HTML>
 <head>
 <title> Crystal Family Home | <?php echo $_settings->info('short_name') ?></title>
@@ -10,6 +12,7 @@
 <meta property="og:description" content="" />
 <meta property="og:image" content="http://localhost/charity/dist/img/no-image-available.png" />
 <meta property="og:url" content="http://localhost/charity/pages/crystal_family_home.php" />
+<?php require_once('../inc/header.php');?>
 <?php require_once('../inc/page_header.php') ?>
 </head>
 <?php include(base_app.'inc/body_block.php') ?>

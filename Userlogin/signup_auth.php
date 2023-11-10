@@ -3,7 +3,7 @@
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'covent';
+$DATABASE_NAME = 'book_shop_db';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
@@ -50,7 +50,7 @@ if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email) VALU
 	$stmt->execute();
 	echo 'You have successfully registered, you can now login!';
         
-        header('Location: ../User_FE/employee.php');
+        header('Location: ../UserLogin/login.php');
 } else {
 	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 	echo 'Could not prepare statement!';

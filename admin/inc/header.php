@@ -19,6 +19,13 @@
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+  
    <!-- Select2 -->
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="<?php echo base_url ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -33,6 +40,9 @@
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/daterangepicker/daterangepicker.css">
+    
+    
+    
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/summernote/summernote-bs4.min.css">
      <!-- SweetAlert2 -->
@@ -43,6 +53,7 @@
 
      <!-- jQuery -->
     <script src="<?php echo base_url ?>plugins/jquery/jquery.min.js"></script>
+    
     <!-- jQuery UI 1.11.4 -->
     <script src="<?php echo base_url ?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- SweetAlert2 -->

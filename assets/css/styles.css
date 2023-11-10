@@ -10733,3 +10733,7 @@ input.cart-qty[type=number] {
         display: block !important;
     }
 }
+
+.confirmation-text {
+    color: white; /* Change this to the color you prefer */
+}

@@ -7,7 +7,7 @@
 	<div class="card-header">
 		<h3 class="card-title">List of Events</h3>
 		<div class="card-tools">
-			<a href="?page=events/manage_event" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
+			<a href="?page=events/manage_event" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New Event</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -61,6 +61,14 @@
 	</div>
 </div>
 <script>
+	function _conf(message, confirmFunction, args) {
+    // Your existing code for displaying the confirmation message
+    var confirmationText = $('<div>').addClass('confirmation-text').text(message);
+    }
+    // Rest of your code for displaying confirmation and handling user response
+    // ...
+
+
 	$(document).ready(function(){
 		$('.delete_data').click(function(){
 			_conf("Are you sure to delete this event permanently?","delete_event",[$(this).attr('data-id')])

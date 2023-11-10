@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin | Recruitment Management System</title>
+  <title>Staff | Care4kids</title>
  	
 
 <?php include('./header.php'); ?>
@@ -93,7 +93,7 @@ div#login-right::before {
                                     <h1>Employee Only</h1>
   						<div class="logo">
 			  				<span class="fa fa-hands-helping"></span>
-                                                        <img src='charity/donation/uploads/Colourful hill.jpg' alt="" width="200" height="200">
+                                                        
                                                         
 			  			</div>
   					<form id="login-form" >

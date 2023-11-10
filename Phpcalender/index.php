@@ -1,4 +1,5 @@
 <?php require_once('db-connect.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,12 +41,12 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient" id="topNavBar">
         <div class="container">
-            <a class="navbar-brand" href="https://sourcecodester.com">
-            Sourcecodester
+            <a class="navbar-brand" href="http://localhost/charity/admin/">
+            Back
             </a>
 
             <div>
-                <b class="text-light">Sample Scheduling</b>
+                <b href='' class="text-light">Event list</b>
             </div>
         </div>
     </nav>

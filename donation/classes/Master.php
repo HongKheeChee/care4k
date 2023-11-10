@@ -175,9 +175,9 @@ Class Master extends DBConnection {
 			}
 			$resp['status'] = 'success';
 			if(empty($id))
-				$this->settings->set_flashdata('success',"New Book successfully saved.");
+				$this->settings->set_flashdata('success',"New item successfully saved.");
 			else
-				$this->settings->set_flashdata('success',"Book successfully updated.");
+				$this->settings->set_flashdata('success',"item successfully updated.");
 		}else{
 			$resp['status'] = 'failed';
 			$resp['err'] = $this->conn->error."[{$sql}]";
@@ -411,7 +411,8 @@ Class Master extends DBConnection {
 		if($save_order){
 			$order_id = $this->conn->insert_id;
 			$data = '';
-			$cart = $this->conn->query("SELECT c.*,p.title,i.price,p.id as pid from `cart` c inner join `inventory` i on i.id=c.inventory_id inner join products p on p.id = i.product_id where c.client_id ='{$client_id}' ");
+			$cart = $this->conn->query("SELECT c.*,p.title,i.price,p.id as pid from `cart` c inner join `inventory` i on i.id=c.inventory_id 
+			inner join products p on p.id = i.product_id where c.client_id ='{$client_id}' ");
 			while($row= $cart->fetch_assoc()):
 				if(!empty($data)) $data .= ", ";
 				$total = $row['price'] * $row['quantity'];

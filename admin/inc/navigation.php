@@ -44,7 +44,7 @@
                       <a href="<?php echo base_url ?>admin/?page=blogs" class="nav-link nav-blogs">
                         <i class="nav-icon fas fa-blog"></i>
                         <p>
-                          Blog List
+                          Shelter List
                         </p>
                       </a>
                     </li>
@@ -61,8 +61,8 @@
                     <li class="nav-header">Task</li>
                     
                     <li class="nav-item dropdown">
-                      <a href="/Phpcalender/index.php" class="nav-link nav-events">
-                        <i class="nav-icon fas fa-calendar-day"></i>
+                      <a href="/charity/Phpcalender/index.php" class="nav-link nav-event">
+                        <i class="nav-icon fas fa-calendar"></i>
                         <p>
                           Event Notify
                         </p>
@@ -70,8 +70,8 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                      <a href="/noti/index.php" class="nav-link nav-events">
-                        <i class="nav-icon fas fa-calendar-day"></i>
+                      <a href="/noti/admin/index.php" class="nav-link nav-even">
+                        <i class="nav-icon fas fa-tasks"></i>
                         <p>
                           Task Notify
                         </p>
@@ -80,7 +80,7 @@
                     
                     <li class="nav-header">Donation</li>
                     <li class="nav-item dropdown">
-                      <a href="/charity/donation/admin/index.php" class="nav-link nav-events">
+                      <a href="/charity/donation/admin/index.php" class="nav-link nav-eve">
                         <i class="nav-icon fas fa-th-list"></i>
                         <p>
                           Donation Menu
@@ -88,8 +88,8 @@
                       </a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a href="/charity/courier/index.php" class="nav-link nav-events">
-                        <i class="nav-icon fas fa-th-list"></i>
+                      <a href="/charity/courier/index.php" class="nav-link nav-ev">
+                        <i class="nav-icon fas fa-shopping-basket"></i>
                         <p>
                           Courier Menu
                         </p>
@@ -99,7 +99,7 @@
                     
                     <li class="nav-header">Volunteer</li>
                     <li class="nav-item dropdown">
-                      <a href="/charity/employ/admin/index.php" class="nav-link nav-events">
+                      <a href="/charity/employ/admin/index.php" class="nav-link nav-e">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Volunteer Application Menu 

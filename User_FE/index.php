@@ -26,7 +26,7 @@ include '../User_BE/db_conn.php';
         <!-- inject:css -->
         <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
-        <link rel="icon" href="../Images/logo.png" />
+        <link rel="icon" href="../uploads/c4k Logo.jpg" />
         
         
         <title>Userdb</title>
@@ -68,10 +68,22 @@ include '../User_BE/db_conn.php';
 
                     <!-- Admin Settings -->
                     <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                            <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                            <i class="icon-mail icon-lg"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+                            <a class="dropdown-item py-3 border-bottom" href="notif.php">
+                                <p class="mb-0 font-weight-medium float-left">You have new notifications </p>
+                                <span class="badge badge-pill badge-primary float-right">View all</span>
+                            </a>
+                        </li>
+                        <br>
                         <li class="nav-item dropdown d-none d-lg-block user-dropdown">
                             <a class="nav-link" id="UserDropdown" href="" data-bs-toggle="dropdown" aria-expanded="false">
                                 <p class="mb-1 mt-3 font-weight-semibold"><?=$_SESSION['name']?></p>
                             </a>
+                            
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                                 <a class="dropdown-item" href="../Userlogin/logout.php"><i class="dropdown-item-icon mdi mdi-power text-primary me-2" href=""></i>Sign Out</a>
                             </div>
@@ -118,32 +130,31 @@ include '../User_BE/db_conn.php';
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item nav-category">Projects</li>
+                    <li class="nav-item nav-category"></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.php" aria-expanded="false" aria-controls="ui-basic">
-                            <i class="menu-icon mdi mdi-floor-plan"></i>
-                            <span class="menu-title">Manage Tasks</span>
+                        <a class="nav-link" href="notif.php" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="menu-icon mdi mdi-mail"></i>
+                            <span class="menu-title">Notification</span>
                         </a>
                     </li>
-                    <li class="nav-item nav-category">Service Management</li>
+                    <li class="nav-item nav-category"></li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#editservice" aria-expanded="false" aria-controls="form-elements">
                             <i class="menu-icon mdi mdi-card-text-outline"></i>
-                            <span class="menu-title">Edit Service</span>
+                            <span class="menu-title">Help</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="editservice">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="decoration.php">Decorations</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/donation/?p=products&c=3c59dc048e8850243be8079a5c74d079">Fun and Entertainment</a></li>
+                                
+                                <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Donation Tracking</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="conu.php">Contact Us</a></li>
                             </ul>
                         </div>
                         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="discount.php" aria-expanded="false" aria-controls="icons">
+                        <a class="nav-link" href="event.php" aria-expanded="false" aria-controls="icons">
                             <i class="menu-icon mdi mdi-layers-outline"></i>
                             <span class="menu-title">Event</span>
                         </a>
@@ -152,14 +163,14 @@ include '../User_BE/db_conn.php';
                     
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="tnc.php" aria-expanded="false" aria-controls="icons">
+                        <a class="nav-link" href="donate.php" aria-expanded="false" aria-controls="icons">
                             <i class="menu-icon mdi mdi-file-document"></i>
                             <span class="menu-title">Donation</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php" aria-expanded="false" aria-controls="icons">
-                            <i class="menu-icon mdi mdi-help-circle-outline"></i>
+                        <a class="nav-link" href="volunt.php" aria-expanded="false" aria-controls="icons">
+                            <i class="menu-icon mdi mdi-account-multiple"></i>
                             <span class="menu-title">Volunteer</span>
                         </a>
                     </li>
@@ -216,7 +227,7 @@ include '../User_BE/db_conn.php';
                                                     <div class="row">
                                                         <div class="col-12 my-auto">
                                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                                <h4 class="card-title card-title-dash">Project Ratio</h4>
+                                                                <h4 class="card-title card-title-dash">Donation Status</h4>
                                                             </div>
                                                             <canvas class="my-auto" id="doughnutChart" height="200"></canvas>
                                                             <div id="doughnut-chart-legend" class="mt-5 text-center "></div>
@@ -235,7 +246,7 @@ include '../User_BE/db_conn.php';
                                                 <div class="card-body">
                                                     <div class="d-sm-flex justify-content-between align-items-start">
                                                         <div>
-                                                            <h4 class="card-title card-title-dash">Progress Review</h4>
+                                                            <h4 class="card-title card-title-dash">Donation Status</h4>
                                                         </div>
                                                     </div>
                                                     <div class="table-responsive  mt-1">
@@ -252,7 +263,9 @@ include '../User_BE/db_conn.php';
                                                             <tbody>
                                                         <?php 
                                 $i = 1;
-                                $qry = $conn->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id where o.client_id = '1' order by unix_timestamp(o.date_created) desc ");
+                                $currentAcc = $_SESSION['name'];
+                                $qry = $conn->query("SELECT o.*,concat(c.firstname,' ',c.lastname) as client from `orders` o inner join clients c on c.id = o.client_id 
+                                where c.firstname = '$currentAcc' order by unix_timestamp(o.date_created) desc ");
                                 while($row = $qry->fetch_assoc()):
                             ?>
                                 <tr>
