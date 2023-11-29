@@ -70,7 +70,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                      <a href="/noti/admin/index.php" class="nav-link nav-even">
+                      <a href="/charity/noti/admin/index.php" class="nav-link nav-even">
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
                           Task Notify

@@ -109,9 +109,9 @@ include '../Back_End/db_conn.php';
                         </li>
                         <li class="nav-item nav-category">Projects</li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projects.php" aria-expanded="false" aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-floor-plan"></i>
-                                <span class="menu-title">Manage Tasks</span>
+                            <a class="nav-link" href="notif.php" aria-expanded="false" aria-controls="ui-basic">
+                                <i class="menu-icon mdi mdi-mail"></i>
+                                <span class="menu-title">Notifications</span>
                             </a>
                         </li>
                         <li class="nav-item nav-category">Service Management</li>

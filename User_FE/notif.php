@@ -148,8 +148,7 @@ include "../User_BE/api/project_api/dbcon.php";
                         </a>
                         <div class="collapse" id="editservice">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
+                                
                                 <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Donation Tracking</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="conu.php">Contact Us</a></li>
                             </ul>

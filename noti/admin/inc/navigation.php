@@ -8,7 +8,7 @@
       <aside class="main-sidebar sidebar-dark-navy navbar-dark elevation-4 sidebar-no-expand bg-gray-dark">
         <!-- Brand Logo -->
         <a href="<?php echo base_url ?>admin" class="brand-link bg-navy text-sm">
-        <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="brand-image img-circle elevation-3" style="opacity: .8;width: 1.5rem;height: 1.5rem;max-height: unset">
+        <img src="../uploads/c4k Logo.png" alt="Store Logo" class="brand-image img-circle elevation-3" style="opacity: .8;width: 1.5rem;height: 1.5rem;max-height: unset">
         <span class="brand-text font-weight-light"><?php echo $_settings->info('short_name') ?></span>
         </a>
         <!-- Sidebar -->
