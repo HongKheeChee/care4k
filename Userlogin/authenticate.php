@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-// Change this to your connection info.
+//  connection info.
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'book_shop_db'; 
+$DATABASE_NAME = 'care4k_db'; 
 
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);

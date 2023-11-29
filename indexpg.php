@@ -474,12 +474,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                     <div class="d-flex align-items-center my-2">
                                         <p class="mb-0">
                                             <strong>Raised:</strong>
-                                            $27,600
+                                            RM100
                                         </p>
 
                                         <p class="ms-auto mb-0">
                                             <strong>Goal:</strong>
-                                            $60,000
+                                            RM10,000
                                         </p>
                                     </div>
                                 </div>

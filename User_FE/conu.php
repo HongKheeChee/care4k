@@ -123,8 +123,7 @@ include '../Back_End/db_conn.php';
                         </a>
                         <div class="collapse" id="editservice">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
+                            
                                 <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Donation Tracking</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="/charity/User_FE/fun.php">Contact Us</a></li>
                             </ul>
