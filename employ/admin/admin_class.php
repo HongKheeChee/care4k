@@ -30,7 +30,7 @@ Class Action {
 	}
 	function login2(){
 		extract($_POST);
-		$qry = $this->db->query("SELECT * FROM users where username = '".$email."' and password = '".md5($password)."' ");
+		$qry = $this->db->query("SELECT * FROM userad where username = '".$email."' and password = '".md5($password)."' ");
 		if($qry->num_rows > 0){
 			foreach ($qry->fetch_array() as $key => $value) {
 				if($key != 'passwors' && !is_numeric($key))
@@ -63,9 +63,9 @@ Class Action {
 		$data .= ", password = '$password' ";
 		$data .= ", type = '$type' ";
 		if(empty($id)){
-			$save = $this->db->query("INSERT INTO users set ".$data);
+			$save = $this->db->query("INSERT INTO userad set ".$data);
 		}else{
-			$save = $this->db->query("UPDATE users set ".$data." where id = ".$id);
+			$save = $this->db->query("UPDATE userad set ".$data." where id = ".$id);
 		}
 		if($save){
 			return 1;
@@ -79,14 +79,14 @@ Class Action {
 		$data .= ", username = '$email' ";
 		$data .= ", password = '".md5($password)."' ";
 		$data .= ", type = 3";
-		$chk = $this->db->query("SELECT * FROM users where username = '$email' ")->num_rows;
+		$chk = $this->db->query("SELECT * FROM userad where username = '$email' ")->num_rows;
 		if($chk > 0){
 			return 2;
 			exit;
 		}
-			$save = $this->db->query("INSERT INTO users set ".$data);
+			$save = $this->db->query("INSERT INTO userad set ".$data);
 		if($save){
-			$qry = $this->db->query("SELECT * FROM users where username = '".$email."' and password = '".md5($password)."' ");
+			$qry = $this->db->query("SELECT * FROM userad where username = '".$email."' and password = '".md5($password)."' ");
 			if($qry->num_rows > 0){
 				foreach ($qry->fetch_array() as $key => $value) {
 					if($key != 'passwors' && !is_numeric($key))

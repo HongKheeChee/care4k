@@ -6,7 +6,7 @@ $unmae= "root";
 
 $password = "";
 
-$db_name = "book_shop_db";
+$db_name = "care4k_db";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 

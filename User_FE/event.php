@@ -22,7 +22,7 @@ include '../Back_End/db_conn.php';
         <!-- inject:css -->
         <link rel="stylesheet" href="../User_FE/admin_design/css/vertical-layout-light/style.css">
         <!-- endinject -->
-        <link rel="icon" href="../Images/logo.png" />
+        <link rel="icon" href="/User_BE/uploads/c4k Logo.jpg" />
         
         
         <title>C4kids</title>
@@ -42,10 +42,10 @@ include '../Back_End/db_conn.php';
 
                     <div>
                         <a class="navbar-brand brand-logo" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                         <a class="navbar-brand brand-logo-mini" href="index.php">
-                            <img src="../Images/coventco_white.jpg" alt="logo" />
+                            <img src="../uploads/c4k Logo.jpg" alt="logo" />
                         </a>
                     </div>
                 </div>
@@ -123,8 +123,7 @@ include '../Back_End/db_conn.php';
                         </a>
                         <div class="collapse" id="editservice">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="fnd.php">Food and Drinks</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="item.php">Items</a></li>
+                                
                                 <li class="nav-item"> <a class="nav-link" href="http://localhost/charity/courier/index.php?page=track">Donation Tracking</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="conu.php">Contact Us</a></li>
                             </ul>
