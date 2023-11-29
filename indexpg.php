@@ -276,7 +276,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <img src="images/group-people-volunteering-foodbank-poor-people.jpg"
+                        <img src="images/Ourmission.png"
                             class="custom-text-box-image img-fluid" alt="">
                     </div>
 
@@ -520,7 +520,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                     </div>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Join our event</a>
+                                <a href="http://localhost/charity/?p=events" class="custom-btn btn">Join our event</a>
                             </div>
                         </div>
                     </div>

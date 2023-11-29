@@ -6,7 +6,7 @@ $token_hash = hash("sha256", $token);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "SELECT * FROM user
+$sql = "SELECT * FROM accounts
         WHERE reset_token_hash = ?";
 
 $stmt = $mysqli->prepare($sql);
@@ -45,8 +45,8 @@ if ($_POST["password"] !== $_POST["password_confirmation"]) {
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$sql = "UPDATE user
-        SET password_hash = ?,
+$sql = "UPDATE accounts
+        SET password = ?,
             reset_token_hash = NULL,
             reset_token_expires_at = NULL
         WHERE id = ?";
@@ -58,3 +58,5 @@ $stmt->bind_param("ss", $password_hash, $user["id"]);
 $stmt->execute();
 
 echo "Password updated. You can now login.";
+header("refresh:2;url=http://localhost/charity/Userlogin/login.php");
+exit;

@@ -10,7 +10,7 @@ $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "UPDATE user
+$sql = "UPDATE accounts
         SET reset_token_hash = ?,
             reset_token_expires_at = ?
         WHERE email = ?";
@@ -31,8 +31,8 @@ if ($mysqli->affected_rows) {
     $mail->Body = <<<END
 
     Click <a href="http://localhost/charity/php-password-reset-main/reset-password.php?token=$token">here</a> 
-    to reset your password.
-
+    to reset your password for Care4kids account.
+    
     END;
 
     try {

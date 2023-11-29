@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "login_db";
+$dbname = "care4k_db";
 $username = "root";
 $password = "";
 
