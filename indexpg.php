@@ -926,7 +926,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                     class="img-fluid avatar-image" alt="">
 
                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                    <p class="mb-0">Clara Barton</p>
+                                    <p class="mb-0">Ms Loo</p>
                                     <p class="mb-0"><strong>HR & Office Manager</strong></p>
                                 </div>
                             </div>
